@@ -1,0 +1,79 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+---
+
+<Layout title="Hakkımızda | DIM - Depozito İade Makineleri">
+  <Navbar client:load currentPath="/about" />
+  
+  <main class="py-20 px-4 max-w-7xl mx-auto min-h-screen pt-28">
+    <div class="text-center mb-16">
+      <span class="inline-block bg-gradient-to-r from-violet-500/20 to-pink-500/20 text-violet-400 text-sm font-bold px-5 py-2 rounded-full mb-4">💡 HAKKIMIZDA</span>
+      <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Türkiye'nin <span class="gradient-text">DİS Ortağı</span></h2>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">
+      <div>
+        <h3 class="text-3xl font-extrabold text-white mb-6">DIM Kimdir?</h3>
+        <p class="text-slate-300 mb-6 text-lg">DIM, 2025 yılında yürürlüğe giren Depozito İade Sistemi kapsamında Türkiye'nin en kapsamlı çözüm portföyünü sunan öncü şirkettir.</p>
+        <p class="text-slate-400 mb-8">REVEGO, RVM Systems, Anker Andersen ve Ripet - 4 global markanın yetkili distribütörü olarak uçtan uca hizmet sunuyoruz.</p>
+        
+        <div class="grid grid-cols-3 gap-4">
+          {[
+            { v: '4', l: 'Marka', i: '🌍' },
+            { v: '16', l: 'Ürün', i: '📦' },
+            { v: '81', l: 'İl', i: '🇹🇷' }
+          ].map((s) => (
+            <div class="glass-card rounded-2xl p-4 text-center">
+              <div class="text-2xl mb-1">{s.i}</div>
+              <div class="text-2xl font-extrabold gradient-text">{s.v}</div>
+              <div class="text-xs text-slate-400">{s.l}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+      
+      <div class="glass-card rounded-3xl p-8">
+        <h4 class="text-xl font-bold text-white mb-6 flex items-center gap-2">🔧 Hizmetlerimiz</h4>
+        <div class="space-y-4">
+          {[
+            { i: '🔍', t: 'İhtiyaç Analizi', d: 'En uygun çözümü belirliyoruz' },
+            { i: '🚚', t: 'Kurulum', d: 'Profesyonel ekiple yerinde kurulum' },
+            { i: '🔧', t: 'Bakım & Servis', d: '7/24 teknik destek' },
+            { i: '📊', t: 'İzleme', d: 'Uzaktan performans takibi' }
+          ].map((item) => (
+            <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-white/5 transition-colors">
+              <div class="w-12 h-12 bg-gradient-to-br from-emerald-400 to-cyan-500 rounded-xl flex items-center justify-center text-xl flex-shrink-0">{item.i}</div>
+              <div>
+                <h5 class="text-white font-semibold">{item.t}</h5>
+                <p class="text-slate-400 text-sm">{item.d}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <div class="glass-card rounded-3xl p-8 md:p-12">
+      <h3 class="text-2xl font-extrabold text-white mb-8 text-center">♻️ Depozito İade Süreci</h3>
+      <div class="grid md:grid-cols-4 gap-8">
+        {[
+          { s: '1', t: 'Toplama', d: 'Ambalaj makineye bırakılır', i: '📥', c: 'from-blue-400 to-cyan-500' },
+          { s: '2', t: 'Tanıma', d: 'AI ile doğrulama yapılır', i: '🔍', c: 'from-violet-400 to-purple-500' },
+          { s: '3', t: 'İade', d: 'Depozito ödenir', i: '💳', c: 'from-emerald-400 to-teal-500' },
+          { s: '4', t: 'Geri Dönüşüm', d: 'Ambalaj geri kazanılır', i: '♻️', c: 'from-green-400 to-lime-500' }
+        ].map((item) => (
+          <div class="text-center">
+            <div class={`w-20 h-20 bg-gradient-to-br ${item.c} rounded-2xl flex items-center justify-center text-4xl mx-auto mb-4 shadow-xl`}>{item.i}</div>
+            <div class={`inline-block bg-gradient-to-r ${item.c} text-white text-xs font-bold px-3 py-1 rounded-full mb-2`}>Adım {item.s}</div>
+            <h4 class="text-white font-bold mb-2">{item.t}</h4>
+            <p class="text-slate-400 text-sm">{item.d}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

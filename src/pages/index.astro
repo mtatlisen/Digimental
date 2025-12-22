@@ -1,0 +1,101 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import Hero from '../components/Hero';
+import BrandCard from '../components/BrandCard';
+import ProductCard from '../components/ProductCard';
+import { BRANDS, PRODUCTS } from '../data/products';
+
+const highlightedProducts = PRODUCTS.filter(p => p.highlight);
+---
+
+<Layout>
+  <Navbar client:load currentPath="/" />
+  
+  <main>
+    <Hero client:load />
+    
+    <!-- Why DIM Section -->
+    <section class="py-24 px-4 relative">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <span class="inline-block bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 text-emerald-400 text-sm font-bold px-5 py-2 rounded-full mb-4">💡 NEDEN DIM?</span>
+          <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Depozito İade Sistemi <span class="gradient-text">(DİS)</span></h2>
+          <p class="text-slate-400 max-w-2xl mx-auto">Türkiye genelinde zorunlu hale gelen DİS için en kapsamlı çözüm portföyü</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {[
+            { icon: '🤖', title: 'AI Tanıma', desc: 'Yapay zeka destekli ambalaj tanıma', color: 'from-violet-400 to-purple-500', glow: 'glow-purple' },
+            { icon: '📡', title: 'IoT İzleme', desc: 'Gerçek zamanlı doluluk takibi', color: 'from-blue-400 to-cyan-500', glow: 'glow-blue' },
+            { icon: '⚡', title: '%90 Sıkıştırma', desc: 'Patentli hacim azaltma', color: 'from-emerald-400 to-teal-500', glow: 'glow-green' },
+            { icon: '🔧', title: '7/24 Destek', desc: 'Uzaktan tanılama ve servis', color: 'from-orange-400 to-red-500', glow: '' }
+          ].map((item) => (
+            <div class={`glass-card rounded-2xl p-6 card-hover text-center ${item.glow}`}>
+              <div class={`w-16 h-16 bg-gradient-to-br ${item.color} rounded-2xl flex items-center justify-center text-3xl mx-auto mb-4 shadow-xl`}>{item.icon}</div>
+              <h3 class="text-white font-bold text-lg mb-2">{item.title}</h3>
+              <p class="text-slate-400 text-sm">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="py-24 px-4 relative">
+      <div class="absolute inset-0 bg-gradient-to-r from-emerald-500/5 via-cyan-500/5 to-blue-500/5"></div>
+      <div class="max-w-7xl mx-auto relative">
+        <div class="text-center mb-16">
+          <span class="inline-block bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-400 text-sm font-bold px-5 py-2 rounded-full mb-4">🌍 GLOBAL MARKALAR</span>
+          <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4">4 Lider Marka, <span class="gradient-text">Tek Adres</span></h2>
+          <p class="text-slate-400 max-w-2xl mx-auto">Avrupa'nın en prestijli üreticilerinin Türkiye distribütörüyüz</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {BRANDS.map((brand) => <BrandCard brand={brand} />)}
+        </div>
+      </div>
+    </section>
+
+    <!-- Highlighted Products Section -->
+    <section class="py-24 px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <span class="inline-block bg-gradient-to-r from-orange-500/20 to-pink-500/20 text-orange-400 text-sm font-bold px-5 py-2 rounded-full mb-4">⭐ ÖNE ÇIKANLAR</span>
+          <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4">En Popüler <span class="gradient-text">Ürünler</span></h2>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {highlightedProducts.map((p) => <ProductCard product={p} />)}
+        </div>
+
+        <div class="text-center mt-12">
+          <a href="/products" class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-emerald-500 via-cyan-500 to-blue-500 rounded-2xl font-bold text-lg text-white shadow-xl shadow-emerald-500/30 hover:shadow-cyan-500/50 transition-all hover:scale-105">
+            Tüm 16 Ürünü Gör
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 px-4 relative overflow-hidden">
+      <div class="absolute inset-0">
+        <video autoplay muted loop playsinline class="w-full h-full object-cover opacity-30">
+          <source src="https://rvmsystems.com.tr/wp-content/uploads/sites/19/2025/01/rvm_webbplats_ny-final.mp4" type="video/mp4" />
+        </video>
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/90 to-slate-900"></div>
+      </div>
+      <div class="max-w-4xl mx-auto text-center relative">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6">Hemen <span class="gradient-text">Teklif Alın</span></h2>
+        <p class="text-xl text-slate-300 mb-8">İşletmenize en uygun depozito iade çözümünü birlikte belirleyelim</p>
+        <a href="/contact" class="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-emerald-500 via-cyan-500 to-blue-500 rounded-2xl font-bold text-xl text-white shadow-2xl shadow-emerald-500/30 hover:shadow-cyan-500/50 transition-all hover:scale-105">
+          <span>📞</span>Ücretsiz Danışmanlık
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,68 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import { BRANDS, PRODUCTS } from '../data/products';
+---
+
+<Layout title="Markalar | DIM - Depozito İade Makineleri">
+  <Navbar client:load currentPath="/brands" />
+  
+  <main class="py-20 px-4 max-w-7xl mx-auto min-h-screen pt-28">
+    <div class="text-center mb-16">
+      <span class="inline-block bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-400 text-sm font-bold px-5 py-2 rounded-full mb-4">🏷️ MARKALARIMIZ</span>
+      <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4"><span class="gradient-text">4 Global</span> Lider</h2>
+    </div>
+    
+    <div class="space-y-8">
+      {BRANDS.map((brand) => {
+        const brandProducts = PRODUCTS.filter(p => p.brand === brand.name);
+        const borderColor = brand.color.includes('emerald') ? '#34d399' : brand.color.includes('blue') ? '#60a5fa' : brand.color.includes('orange') ? '#fb923c' : '#4ade80';
+        
+        return (
+          <div class="glass-card rounded-3xl overflow-hidden border-l-4 hover:border-l-emerald-500 transition-all" style={`border-left-color: ${borderColor}`}>
+            <div class="p-8 md:p-10">
+              <div class="flex flex-col lg:flex-row lg:items-center gap-8">
+                <div class={`w-20 h-20 bg-gradient-to-br ${brand.color} rounded-3xl flex items-center justify-center text-4xl shadow-2xl flex-shrink-0`}>{brand.emoji}</div>
+                <div class="flex-1">
+                  <div class="flex flex-wrap items-center gap-3 mb-3">
+                    <h3 class="text-3xl font-extrabold text-white">{brand.name}</h3>
+                    <span class="text-sm bg-white/10 text-slate-300 px-3 py-1 rounded-full">{brand.country}</span>
+                    <a href={brand.website} target="_blank" rel="noopener noreferrer" class={`text-sm bg-gradient-to-r ${brand.color} text-white px-4 py-1.5 rounded-full font-bold hover:opacity-80 transition-opacity`}>Web Sitesi →</a>
+                  </div>
+                  <p class={`bg-gradient-to-r ${brand.color} bg-clip-text text-transparent font-bold text-lg mb-3`}>{brand.tagline}</p>
+                  <p class="text-slate-300 mb-5 max-w-3xl">{brand.description}</p>
+                  
+                  <div class="flex flex-wrap gap-2">
+                    {brand.features.map((f) => (
+                      <span class="flex items-center gap-2 text-sm bg-white/10 text-slate-200 px-4 py-2 rounded-xl">
+                        <span class="text-emerald-400">✓</span>{f}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="border-t border-white/10 bg-slate-900/50 p-6">
+              <h4 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4">Bu Markadan Ürünler</h4>
+              <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                {brandProducts.map((product) => (
+                  <div class="glass rounded-xl p-3 hover:bg-white/10 transition-colors flex items-center gap-3">
+                    <div class={`w-10 h-10 bg-gradient-to-br ${product.color} rounded-lg flex items-center justify-center text-white text-xs font-bold`}>{product.name.slice(0, 2)}</div>
+                    <div>
+                      <div class="text-white font-semibold text-sm">{product.name}</div>
+                      <div class="text-xs text-slate-500">{product.category}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import ProductFilter from '../components/ProductFilter';
+---
+
+<Layout title="Ürünler | DIM - Depozito İade Makineleri">
+  <Navbar client:load currentPath="/products" />
+  
+  <main class="py-20 px-4 max-w-7xl mx-auto min-h-screen pt-28">
+    <div class="text-center mb-12">
+      <span class="inline-block bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 text-emerald-400 text-sm font-bold px-5 py-2 rounded-full mb-4">📦 ÜRÜN KATALOĞU</span>
+      <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4"><span class="gradient-text">16 Farklı</span> Çözüm</h2>
+      <p class="text-slate-400 max-w-2xl mx-auto">Her ihtiyaca uygun depozito iade makinesi</p>
+    </div>
+    
+    <ProductFilter client:load />
+  </main>
+
+  <Footer />
+</Layout>

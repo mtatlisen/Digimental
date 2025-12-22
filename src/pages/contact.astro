@@ -1,0 +1,60 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import ContactForm from '../components/ContactForm';
+import { BRANDS } from '../data/products';
+---
+
+<Layout title="İletişim | DIM - Depozito İade Makineleri">
+  <Navbar client:load currentPath="/contact" />
+  
+  <main class="py-20 px-4 max-w-7xl mx-auto min-h-screen pt-28">
+    <div class="text-center mb-16">
+      <span class="inline-block bg-gradient-to-r from-orange-500/20 to-pink-500/20 text-orange-400 text-sm font-bold px-5 py-2 rounded-full mb-4">📞 İLETİŞİM</span>
+      <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Hemen <span class="gradient-text">Ulaşın</span></h2>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-12">
+      <div>
+        <h3 class="text-2xl font-bold text-white mb-6">Ücretsiz Danışmanlık</h3>
+        <p class="text-slate-300 mb-8 text-lg">Uzman ekibimiz sizi bekliyor. İşletmenize en uygun çözümü birlikte belirleyelim.</p>
+        
+        <div class="space-y-4 mb-10">
+          {[
+            { i: '📍', l: 'Adres', v: 'İstanbul, Türkiye' },
+            { i: '📧', l: 'E-posta', v: 'info@deposit.com.tr' },
+            { i: '📞', l: 'Telefon', v: '+90 (212) 000 00 00' },
+            { i: '⏰', l: 'Destek', v: '7/24 Teknik Destek' }
+          ].map((item) => (
+            <div class="flex items-center gap-4 p-4 glass-card rounded-xl">
+              <div class="w-12 h-12 bg-gradient-to-br from-emerald-400 to-cyan-500 rounded-xl flex items-center justify-center text-xl">{item.i}</div>
+              <div>
+                <div class="text-xs text-slate-500 uppercase tracking-wide">{item.l}</div>
+                <div class="text-white font-semibold">{item.v}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div class="glass-card rounded-2xl p-6">
+          <h4 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4">Marka Web Siteleri</h4>
+          <div class="grid grid-cols-2 gap-3">
+            {BRANDS.map(b => (
+              <a href={b.website} target="_blank" rel="noopener noreferrer" class={`flex items-center gap-3 p-3 rounded-xl bg-gradient-to-r ${b.color} bg-opacity-10 hover:bg-opacity-20 transition-all`}>
+                <span class="text-2xl">{b.emoji}</span>
+                <span class="text-white font-medium text-sm">{b.name}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+      
+      <div class="glass-card p-8 rounded-3xl">
+        <ContactForm client:load />
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
