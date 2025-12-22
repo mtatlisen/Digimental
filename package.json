@@ -4,11 +4,11 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "dev": "npm exec -- astro dev",
+    "start": "npm exec -- astro dev",
+    "build": "npm exec -- astro build",
+    "preview": "npm exec -- astro preview",
+    "astro": "npm exec -- astro"
   },
   "dependencies": {
     "@astrojs/starlight": "^0.37.0",
