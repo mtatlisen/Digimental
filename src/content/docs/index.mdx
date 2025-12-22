@@ -1,40 +1,53 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
+title: Digimental
+description: Dijital Çözümler ve Yazılım Hizmetleri - İşletmenizi Geleceğe Taşıyoruz
+template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
+  tagline: İşletmenizi dijital dünyada öne çıkaracak yenilikçi yazılım çözümleri sunuyoruz. Deneyimli ekibimizle birlikte dijital dönüşüm yolculuğunuzda yanınızdayız.
   image:
     file: ../../assets/houston.webp
   actions:
-    - text: Example Guide
-      link: /guides/example/
+    - text: Hizmetlerimiz
+      link: /guides/yazilim-gelistirme/
       icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
+    - text: İletişime Geçin
+      link: /reference/iletisim/
       icon: external
       variant: minimal
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## Next steps
+## Neden Digimental?
 
 <CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
+	<Card title="Yazılım Geliştirme" icon="laptop">
+		Modern teknolojilerle özelleştirilmiş yazılım çözümleri geliştiriyoruz. Web, mobil ve masaüstü uygulamalarınız için profesyonel hizmet.
 	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
+	<Card title="Dijital Dönüşüm" icon="rocket">
+		İş süreçlerinizi dijitalleştirerek verimliliğinizi artırıyoruz. Bulut çözümleri, otomasyon ve entegrasyon hizmetleri.
 	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
+	<Card title="Danışmanlık" icon="puzzle">
+		Teknoloji stratejinizi belirlemede ve doğru kararlar almanızda size rehberlik ediyoruz. Deneyimli uzman kadromuz yanınızda.
 	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
+	<Card title="Destek & Bakım" icon="setting">
+		7/24 teknik destek ve düzenli bakım hizmetleriyle sistemlerinizin kesintisiz çalışmasını sağlıyoruz.
 	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
+</CardGrid>
+
+## Çözümlerimiz
+
+<CardGrid>
+	<Card title="E-Ticaret Çözümleri" icon="open-book">
+		Online satış platformları, ödeme entegrasyonları ve stok yönetim sistemleri.
+	</Card>
+	<Card title="Kurumsal Yazılımlar" icon="document">
+		ERP, CRM ve iş zekası çözümleri ile kurumsal süreçlerinizi optimize edin.
+	</Card>
+	<Card title="Mobil Uygulamalar" icon="add-document">
+		iOS ve Android platformları için native ve cross-platform mobil uygulama geliştirme.
+	</Card>
+	<Card title="Bulut Hizmetleri" icon="random">
+		AWS, Azure ve Google Cloud altyapılarında güvenli ve ölçeklenebilir çözümler.
 	</Card>
 </CardGrid>

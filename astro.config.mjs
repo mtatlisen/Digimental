@@ -4,22 +4,42 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://www.digimental.com.tr',
 	integrations: [
 		starlight({
-			title: 'My Docs',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			title: 'Digimental',
+			description: 'Digimental - Dijital Çözümler ve Yazılım Hizmetleri',
+			defaultLocale: 'root',
+			locales: {
+				root: {
+					label: 'Türkçe',
+					lang: 'tr',
+				},
+			},
+			logo: {
+				src: './src/assets/logo.svg',
+				replacesTitle: false,
+			},
+			social: [
+				{ icon: 'linkedin', label: 'LinkedIn', href: 'https://linkedin.com/company/digimental' },
+				{ icon: 'x.com', label: 'X', href: 'https://x.com/digimental' },
+			],
 			sidebar: [
 				{
-					label: 'Guides',
+					label: 'Hizmetlerimiz',
 					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
+						{ label: 'Yazılım Geliştirme', slug: 'guides/yazilim-gelistirme' },
+						{ label: 'Dijital Dönüşüm', slug: 'guides/dijital-donusum' },
+						{ label: 'Danışmanlık', slug: 'guides/danismanlik' },
 					],
 				},
 				{
-					label: 'Reference',
+					label: 'Hakkımızda',
 					autogenerate: { directory: 'reference' },
 				},
+			],
+			customCss: [
+				'./src/styles/custom.css',
 			],
 		}),
 	],
