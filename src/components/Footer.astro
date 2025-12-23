@@ -1,0 +1,53 @@
+---
+import { NAV } from '../data/catalog';
+---
+
+<footer class="mt-24 border-t border-white/10">
+	<div class="mx-auto max-w-6xl px-6 py-12">
+		<div class="flex flex-col justify-between gap-8 md:flex-row">
+			<div>
+				<div class="mb-4 flex items-center gap-2">
+					<div class="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-500">
+						<span class="text-sm font-bold text-white">D</span>
+					</div>
+					<span class="font-semibold text-white">
+						deposit<span class="text-emerald-400">.com.tr</span>
+					</span>
+				</div>
+				<p class="max-w-xs text-sm text-slate-400">
+					Türkiye'nin depozito iade sistemi ortağı. 4 marka, 15 çözüm.
+				</p>
+			</div>
+
+			<div class="flex gap-12">
+				<div>
+					<h2 class="mb-3 text-sm font-medium text-white">Sayfalar</h2>
+					<div class="space-y-2">
+						{NAV.map((i) => (
+							<a
+								href={i.href}
+								class="block text-sm text-slate-400 transition-colors hover:text-white"
+								data-astro-transition
+							>
+								{i.label}
+							</a>
+						))}
+					</div>
+				</div>
+
+				<div>
+					<h2 class="mb-3 text-sm font-medium text-white">İletişim</h2>
+					<div class="space-y-2 text-sm text-slate-400">
+						<p>info@deposit.com.tr</p>
+						<p>+90 (212) 000 00 00</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="mt-8 border-t border-white/10 pt-8 text-center">
+			<p class="text-sm text-slate-500">© 2025 DIM</p>
+		</div>
+	</div>
+</footer>
+

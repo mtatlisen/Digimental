@@ -1,0 +1,178 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import BrandCard from '../components/BrandCard.astro';
+import ProductCard from '../components/ProductCard.astro';
+import { BRANDS, PRODUCTS } from '../data/catalog';
+import { Image } from 'astro:assets';
+import heroBg from '../assets/houston.webp';
+---
+
+<SiteLayout
+	title="DIM - Deposit.com.tr | Depozito İade Makineleri"
+	description="REVEGO, RVM Systems, Ripet ve Anker Andersen — 4 global markanın Türkiye distribütörü."
+>
+	<div class="min-h-screen">
+		<Navbar />
+
+		<!-- Hero -->
+		<section
+			data-hero
+			class="relative overflow-hidden px-6 pb-20 pt-32"
+			style="--hero-parallax: 0px"
+		>
+			<div class="pointer-events-none absolute inset-0">
+				<div class="absolute inset-0 bg-[radial-gradient(65%_60%_at_50%_0%,rgba(16,185,129,0.20),transparent_60%)]"></div>
+				<div class="absolute inset-0 bg-[radial-gradient(60%_55%_at_85%_10%,rgba(6,182,212,0.16),transparent_60%)]"></div>
+				<div
+					class="absolute left-1/2 top-14 h-[520px] w-[780px] -translate-x-1/2 rounded-full bg-emerald-500/10 blur-3xl floaty"
+					aria-hidden="true"
+				></div>
+
+				<div class="absolute inset-x-0 bottom-0 top-0 opacity-25">
+					<div
+						class="absolute inset-0"
+						style="transform: translate3d(0, calc(var(--hero-parallax) * -1), 0);"
+					>
+						<Image
+							src={heroBg}
+							alt=""
+							loading="eager"
+							decoding="async"
+							class="h-full w-full object-cover"
+							format="webp"
+						/>
+					</div>
+					<div class="absolute inset-0 bg-slate-950/70"></div>
+				</div>
+			</div>
+
+			<div class="relative mx-auto max-w-4xl text-center">
+				<div
+					class="reveal mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-500/25 bg-emerald-500/10 px-3 py-1"
+					data-reveal
+				>
+					<span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+					<span class="text-sm text-emerald-300">Türkiye'nin DİS Ortağı</span>
+				</div>
+
+				<h1
+					class="reveal mb-6 text-4xl font-bold leading-tight text-white md:text-6xl"
+					data-reveal
+				>
+					Depozito İade<br />
+					<span
+						class="bg-gradient-to-br from-emerald-400 to-cyan-400 bg-clip-text text-transparent"
+					>
+						Çözümleri
+					</span>
+				</h1>
+
+				<p
+					class="reveal mx-auto mb-8 max-w-2xl text-lg text-slate-300/90"
+					data-reveal
+				>
+					REVEGO, RVM Systems, Ripet ve Anker Andersen — 4 global markanın Türkiye distribütörü
+				</p>
+
+				<div class="reveal flex justify-center gap-4" data-reveal>
+					<a
+						href="/products"
+						class="rounded-lg bg-emerald-500 px-6 py-3 font-medium text-white transition-colors hover:bg-emerald-600"
+						data-astro-transition
+					>
+						Ürünleri İncele
+					</a>
+					<a
+						href="/contact"
+						class="glass rounded-lg px-6 py-3 font-medium text-white transition-colors hover:bg-white/5"
+						data-astro-transition
+					>
+						İletişim
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Stats -->
+		<section class="border-y border-white/10 px-6 py-12">
+			<div class="mx-auto grid max-w-4xl grid-cols-2 gap-8 text-center md:grid-cols-4">
+				{[
+					{ v: '4', l: 'Marka' },
+					{ v: '15', l: 'Ürün' },
+					{ v: '300/dk', l: 'Max Hız' },
+					{ v: '%99.5', l: 'Doğruluk' },
+				].map((s) => (
+					<div class="reveal" data-reveal>
+						<div class="text-2xl font-bold text-white">{s.v}</div>
+						<div class="text-sm text-slate-500">{s.l}</div>
+					</div>
+				))}
+			</div>
+		</section>
+
+		<!-- Brands -->
+		<section class="px-6 py-20">
+			<div class="mx-auto max-w-6xl">
+				<h2 class="reveal mb-8 text-2xl font-bold text-white" data-reveal>Markalar</h2>
+				<div class="grid gap-4 md:grid-cols-4">
+					{BRANDS.map((b) => (
+						<div class="reveal" data-reveal>
+							<BrandCard b={b} />
+						</div>
+					))}
+				</div>
+			</div>
+		</section>
+
+		<!-- Featured Products -->
+		<section class="bg-slate-900/20 px-6 py-20">
+			<div class="mx-auto max-w-6xl">
+				<div class="mb-8 flex items-center justify-between">
+					<h2 class="reveal text-2xl font-bold text-white" data-reveal>Öne Çıkanlar</h2>
+					<a
+						href="/products"
+						class="reveal text-sm text-emerald-300 hover:underline"
+						data-reveal
+						data-astro-transition
+					>
+						Tümünü gör →
+					</a>
+				</div>
+				<div class="grid gap-6 md:grid-cols-4">
+					{PRODUCTS.filter((p) => p.tag)
+						.slice(0, 4)
+						.map((p) => (
+							<div class="reveal" data-reveal>
+								<ProductCard p={p} />
+							</div>
+						))}
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA -->
+		<section class="px-6 py-20">
+			<div class="mx-auto max-w-2xl text-center">
+				<h2 class="reveal mb-4 text-2xl font-bold text-white" data-reveal>
+					Projeniz için teklif alın
+				</h2>
+				<p class="reveal mb-6 text-slate-400" data-reveal>
+					İşletmenize uygun çözümü birlikte belirleyelim
+				</p>
+				<a
+					href="/contact"
+					class="reveal inline-block rounded-lg bg-emerald-500 px-8 py-3 font-medium text-white transition-colors hover:bg-emerald-600"
+					data-reveal
+					data-astro-transition
+				>
+					Ücretsiz Danışmanlık
+				</a>
+			</div>
+		</section>
+
+		<Footer />
+	</div>
+</SiteLayout>
+

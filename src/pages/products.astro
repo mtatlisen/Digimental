@@ -1,0 +1,53 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import ProductCard from '../components/ProductCard.astro';
+import { PRODUCTS } from '../data/catalog';
+
+const brands = ['all', ...Array.from(new Set(PRODUCTS.map((p) => p.brand)))];
+---
+
+<SiteLayout title="Ürünler | Deposit.com.tr" description="15 farklı depozito iade çözümü.">
+	<div class="min-h-screen">
+		<Navbar />
+
+		<main class="px-6 pb-20 pt-24">
+			<div class="mx-auto max-w-6xl">
+				<h1 class="reveal mb-2 text-3xl font-bold text-white" data-reveal>Ürünler</h1>
+				<p class="reveal mb-8 text-slate-400" data-reveal>15 farklı depozito iade çözümü</p>
+
+				<section class="reveal" data-reveal data-product-filter>
+					<div class="mb-8 flex gap-2 overflow-x-auto pb-2">
+						{brands.map((b) => (
+							<button
+								type="button"
+								data-brand={b}
+								aria-pressed={b === 'all' ? 'true' : 'false'}
+								class:list={[
+									'whitespace-nowrap rounded-lg px-4 py-2 text-sm transition-colors',
+									b === 'all'
+										? 'bg-emerald-500 text-white'
+										: 'bg-slate-800 text-slate-400 hover:text-white',
+								]}
+							>
+								{b === 'all' ? 'Tümü' : b}
+							</button>
+						))}
+					</div>
+
+					<div class="grid gap-6 md:grid-cols-3 lg:grid-cols-4">
+						{PRODUCTS.map((p) => (
+							<div class="reveal" data-reveal>
+								<ProductCard p={p} />
+							</div>
+						))}
+					</div>
+				</section>
+			</div>
+		</main>
+
+		<Footer />
+	</div>
+</SiteLayout>
+

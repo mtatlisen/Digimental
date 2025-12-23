@@ -1,0 +1,108 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import { BRANDS } from '../data/catalog';
+---
+
+<SiteLayout title="İletişim | Deposit.com.tr" description="Projeniz için bizimle iletişime geçin.">
+	<div class="min-h-screen">
+		<Navbar />
+
+		<main class="px-6 pb-20 pt-24">
+			<div class="mx-auto max-w-2xl">
+				<h1 class="reveal mb-2 text-3xl font-bold text-white" data-reveal>İletişim</h1>
+				<p class="reveal mb-8 text-slate-400" data-reveal>
+					Projeniz için bizimle iletişime geçin
+				</p>
+
+				<div class="grid gap-8 md:grid-cols-2">
+					<div class="reveal" data-reveal>
+						<div class="mb-8 space-y-4">
+							<div class="glass rounded-lg p-4">
+								<div class="mb-1 text-xs text-slate-500">E-posta</div>
+								<div class="text-white">info@deposit.com.tr</div>
+							</div>
+							<div class="glass rounded-lg p-4">
+								<div class="mb-1 text-xs text-slate-500">Telefon</div>
+								<div class="text-white">+90 (212) 000 00 00</div>
+							</div>
+							<div class="glass rounded-lg p-4">
+								<div class="mb-1 text-xs text-slate-500">Adres</div>
+								<div class="text-white">İstanbul, Türkiye</div>
+							</div>
+						</div>
+
+						<div class="glass rounded-lg p-4">
+							<div class="mb-3 text-xs text-slate-500">Markalar</div>
+							<div class="flex gap-2">
+								{BRANDS.map((b) => (
+									<a
+										href={b.url}
+										target="_blank"
+										rel="noopener noreferrer"
+										class="flex h-10 w-10 items-center justify-center rounded-lg bg-slate-900 text-lg transition-colors hover:bg-slate-800"
+										aria-label={`${b.name} web sitesi`}
+									>
+										{b.flag}
+									</a>
+								))}
+							</div>
+						</div>
+					</div>
+
+					<div class="reveal glass rounded-xl p-6" data-reveal>
+						<div data-contact-ok class="hidden text-center py-8">
+							<div class="mb-3 text-4xl">✓</div>
+							<div class="font-medium text-white">Teşekkürler!</div>
+							<div class="text-sm text-slate-400">En kısa sürede döneceğiz.</div>
+						</div>
+
+						<div data-contact-wrap>
+							<form data-contact-form class="space-y-4">
+								<input
+									required
+									placeholder="Ad Soyad"
+									class="w-full rounded-lg bg-slate-900 px-4 py-3 text-sm text-white outline-none focus:ring-1 focus:ring-emerald-500"
+								/>
+								<input
+									required
+									type="email"
+									placeholder="E-posta"
+									class="w-full rounded-lg bg-slate-900 px-4 py-3 text-sm text-white outline-none focus:ring-1 focus:ring-emerald-500"
+								/>
+								<input
+									placeholder="Telefon"
+									class="w-full rounded-lg bg-slate-900 px-4 py-3 text-sm text-white outline-none focus:ring-1 focus:ring-emerald-500"
+								/>
+								<select
+									class="w-full rounded-lg bg-slate-900 px-4 py-3 text-sm text-white outline-none focus:ring-1 focus:ring-emerald-500"
+								>
+									<option value="">Marka seçin</option>
+									{BRANDS.map((b) => (
+										<option value={b.name}>{b.flag} {b.name}</option>
+									))}
+								</select>
+								<textarea
+									required
+									placeholder="Mesajınız"
+									rows={3}
+									class="w-full resize-none rounded-lg bg-slate-900 px-4 py-3 text-sm text-white outline-none focus:ring-1 focus:ring-emerald-500"
+								/>
+								<button
+									type="submit"
+									class="w-full rounded-lg bg-emerald-500 py-3 font-medium text-white transition-colors hover:bg-emerald-600"
+								>
+									Gönder
+								</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<Footer />
+	</div>
+</SiteLayout>
+

@@ -1,0 +1,66 @@
+@import '@fontsource/inter/latin-400.css';
+@import '@fontsource/inter/latin-500.css';
+@import '@fontsource/inter/latin-600.css';
+@import '@fontsource/inter/latin-700.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	html {
+		font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+			'Apple Color Emoji', 'Segoe UI Emoji';
+	}
+	body {
+		@apply bg-slate-950 text-slate-200 antialiased;
+	}
+}
+
+@layer utilities {
+	/* Glass look used across the landing pages */
+	.glass {
+		@apply border border-white/10 bg-white/[0.03] backdrop-blur;
+	}
+
+	/* Scroll reveal (IntersectionObserver toggles .is-in) */
+	.reveal {
+		opacity: 0;
+		transform: translateY(14px);
+		transition: opacity 700ms cubic-bezier(0.2, 0.8, 0.2, 1),
+			transform 700ms cubic-bezier(0.2, 0.8, 0.2, 1);
+		will-change: opacity, transform;
+	}
+	.reveal.is-in {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	/* Simple float animation (used in hero accents) */
+	@keyframes floaty {
+		0% {
+			transform: translate3d(0, 0, 0);
+		}
+		50% {
+			transform: translate3d(0, -10px, 0);
+		}
+		100% {
+			transform: translate3d(0, 0, 0);
+		}
+	}
+	.floaty {
+		animation: floaty 6s ease-in-out infinite;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.reveal {
+			opacity: 1;
+			transform: none;
+			transition: none;
+		}
+		.floaty {
+			animation: none;
+		}
+	}
+}
+
