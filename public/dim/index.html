@@ -1,0 +1,856 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DIM - Deposit.com.tr | Depozito İade Makineleri</title>
+    <meta
+      name="description"
+      content="Depozito iade makineleri: REVEGO, RVM Systems, Ripet ve Anker Andersen Türkiye distribütörü. 15+ ürün, proje bazlı çözüm ve teknik destek."
+    />
+    <meta name="theme-color" content="#0a0a0b" />
+
+    <link rel="icon" href="/favicon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body class="min-h-screen bg-ink text-white antialiased">
+    <a class="skip-link" href="#main">İçeriğe atla</a>
+
+    <!-- Navbar -->
+    <header class="nav-wrap">
+      <nav class="nav" aria-label="Ana menü">
+        <div class="container nav-inner">
+          <a href="#home" class="logo" aria-label="Deposit ana sayfa">
+            <span class="logo-mark" aria-hidden="true">D</span>
+            <span class="logo-text">
+              <span class="text-white font-semibold">deposit</span><span class="text-emerald-400">.com.tr</span>
+            </span>
+          </a>
+
+          <div class="nav-desktop" role="navigation" aria-label="Sayfalar">
+            <a class="nav-link" href="#home">Ana Sayfa</a>
+            <a class="nav-link" href="#products">Ürünler</a>
+            <a class="nav-link" href="#brands">Markalar</a>
+            <a class="nav-link" href="#contact">İletişim</a>
+            <a class="btn btn-primary" href="#contact">Teklif Al</a>
+          </div>
+
+          <button class="nav-toggle" type="button" aria-controls="mobileMenu" aria-expanded="false">
+            <span class="sr-only">Menüyü aç/kapat</span>
+            <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path class="icon-menu" d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              <path class="icon-close hidden" d="M6 18 18 6M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+
+        <div id="mobileMenu" class="nav-mobile hidden" aria-label="Mobil menü">
+          <div class="container mobile-inner">
+            <a class="mobile-link" href="#home">Ana Sayfa</a>
+            <a class="mobile-link" href="#products">Ürünler</a>
+            <a class="mobile-link" href="#brands">Markalar</a>
+            <a class="mobile-link" href="#contact">İletişim</a>
+            <a class="btn btn-primary w-full text-center" href="#contact">Teklif Al</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <!-- Hero -->
+      <section id="home" class="hero">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="hero-grad" aria-hidden="true"></div>
+
+        <div class="container hero-inner">
+          <div class="badge fade-in-up">
+            <span class="dot" aria-hidden="true"></span>
+            <span class="text-sm text-gray-300">Depozito İade Sistemleri Türkiye</span>
+          </div>
+
+          <h1 class="hero-title fade-in-up fade-delay-1">
+            Geleceğin<br />
+            <span class="gradient-text">Geri Dönüşüm</span><br />
+            Teknolojisi
+          </h1>
+
+          <p class="hero-sub fade-in-up fade-delay-2">
+            4 global marka, 15 farklı ürün. REVEGO, RVM Systems, Ripet ve Anker Andersen’in Türkiye distribütörüyüz.
+          </p>
+
+          <div class="hero-cta fade-in-up fade-delay-3">
+            <a class="btn btn-primary" href="#products">
+              Ürünleri İncele
+              <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M17 8l4 4m0 0-4 4m4-4H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+            <a class="btn btn-ghost" href="#contact">İletişime Geç</a>
+          </div>
+
+          <dl class="stats fade-in-up fade-delay-4">
+            <div class="stat">
+              <dt class="stat-label">Global Marka</dt>
+              <dd class="stat-value">4</dd>
+            </div>
+            <div class="stat">
+              <dt class="stat-label">Farklı Ürün</dt>
+              <dd class="stat-value">15</dd>
+            </div>
+            <div class="stat">
+              <dt class="stat-label">Max Hız</dt>
+              <dd class="stat-value">300/dk</dd>
+            </div>
+            <div class="stat">
+              <dt class="stat-label">Doğruluk</dt>
+              <dd class="stat-value">%99.5</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- Brands -->
+      <section id="brands" class="section">
+        <div class="container">
+          <header class="section-head">
+            <h2 class="section-title">Global Markalar</h2>
+            <p class="section-sub">Avrupa’nın lider depozito iade makinesi üreticilerinin Türkiye distribütörüyüz.</p>
+          </header>
+
+          <div class="grid-brands">
+            <a class="card card-hover" href="https://revego.net/tr/" target="_blank" rel="noopener noreferrer">
+              <div class="card-row">
+                <span class="flag" aria-hidden="true">🇹🇷</span>
+                <div class="card-col">
+                  <h3 class="card-title">REVEGO</h3>
+                  <p class="card-meta">Türkiye</p>
+                  <p class="card-desc">Yerli üretim, iF 2025 ödüllü</p>
+                </div>
+                <span class="card-ext" aria-hidden="true">↗</span>
+              </div>
+            </a>
+
+            <a class="card card-hover" href="https://rvmsystems.com.tr/" target="_blank" rel="noopener noreferrer">
+              <div class="card-row">
+                <span class="flag" aria-hidden="true">🇸🇪</span>
+                <div class="card-col">
+                  <h3 class="card-title">RVM Systems</h3>
+                  <p class="card-meta">İsveç</p>
+                  <p class="card-desc">40+ pazarda 17 milyar ambalaj</p>
+                </div>
+                <span class="card-ext" aria-hidden="true">↗</span>
+              </div>
+            </a>
+
+            <a class="card card-hover" href="https://ripet.it/en/" target="_blank" rel="noopener noreferrer">
+              <div class="card-row">
+                <span class="flag" aria-hidden="true">🇮🇹</span>
+                <div class="card-col">
+                  <h3 class="card-title">Ripet</h3>
+                  <p class="card-meta">İtalya</p>
+                  <p class="card-desc">Patentli RiPress teknolojisi</p>
+                </div>
+                <span class="card-ext" aria-hidden="true">↗</span>
+              </div>
+            </a>
+
+            <a class="card card-hover" href="https://www.anker-andersen.dk/en/" target="_blank" rel="noopener noreferrer">
+              <div class="card-row">
+                <span class="flag" aria-hidden="true">🇩🇰</span>
+                <div class="card-col">
+                  <h3 class="card-title">Anker Andersen</h3>
+                  <p class="card-meta">Danimarka</p>
+                  <p class="card-desc">Sanayi tipi, 300/dk hız</p>
+                </div>
+                <span class="card-ext" aria-hidden="true">↗</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Products -->
+      <section class="section section-muted">
+        <div class="container">
+          <div class="section-row">
+            <div>
+              <h2 class="section-title">Öne Çıkan Ürünler</h2>
+              <p class="section-sub">En popüler depozito iade makinelerimiz</p>
+            </div>
+            <a class="link" href="#products">Tüm Ürünler →</a>
+          </div>
+
+          <div class="grid-products">
+            <!-- iECO i30 -->
+            <article class="product card-hover" data-brand="REVEGO">
+              <div class="product-media">
+                <img
+                  src="https://revego.net/wp-content/uploads/2025/07/REVEGO-i30.webp"
+                  alt="REVEGO iECO i30"
+                  loading="lazy"
+                  decoding="async"
+                  width="800"
+                  height="800"
+                />
+              </div>
+              <div class="product-body">
+                <div class="product-brand">REVEGO</div>
+                <h3 class="product-title">iECO i30</h3>
+                <dl class="product-spec">
+                  <div class="spec-row"><dt>Kapasite</dt><dd>1.660 adet</dd></div>
+                  <div class="spec-row"><dt>Malzeme</dt><dd>PET, Cam, Kutu</dd></div>
+                </dl>
+              </div>
+            </article>
+
+            <!-- iECO i100 -->
+            <article class="product card-hover" data-brand="REVEGO">
+              <div class="product-media">
+                <span class="tag">Mobil</span>
+                <img
+                  src="https://revego.net/wp-content/uploads/2025/07/REVEGO-iECO-i100.webp"
+                  alt="REVEGO iECO i100"
+                  loading="lazy"
+                  decoding="async"
+                  width="800"
+                  height="800"
+                />
+              </div>
+              <div class="product-body">
+                <div class="product-brand">REVEGO</div>
+                <h3 class="product-title">iECO i100</h3>
+                <dl class="product-spec">
+                  <div class="spec-row"><dt>Kapasite</dt><dd>5.000+ adet</dd></div>
+                  <div class="spec-row"><dt>Hız</dt><dd>120/dk</dd></div>
+                  <div class="spec-row"><dt>Malzeme</dt><dd>Tümü</dd></div>
+                </dl>
+              </div>
+            </article>
+
+            <!-- Mega ProLine+ -->
+            <article class="product card-hover" data-brand="RVM Systems">
+              <div class="product-media">
+                <span class="tag">Popüler</span>
+                <img
+                  src="https://rvmsystems.com.tr/wp-content/uploads/sites/19/2025/01/rvm-mega-proline.jpg"
+                  alt="RVM Systems Mega ProLine+"
+                  loading="lazy"
+                  decoding="async"
+                  width="800"
+                  height="800"
+                />
+              </div>
+              <div class="product-body">
+                <div class="product-brand">RVM Systems</div>
+                <h3 class="product-title">Mega ProLine+</h3>
+                <dl class="product-spec">
+                  <div class="spec-row"><dt>Kapasite</dt><dd>8 Kabin</dd></div>
+                  <div class="spec-row"><dt>Hız</dt><dd>100/dk</dd></div>
+                  <div class="spec-row"><dt>Malzeme</dt><dd>Tümü</dd></div>
+                </dl>
+              </div>
+            </article>
+
+            <!-- C-FRONT -->
+            <article class="product card-hover" data-brand="Ripet">
+              <div class="product-media">
+                <span class="tag">6x Sıkıştırma</span>
+                <img
+                  src="https://ripet.it/wp-content/uploads/2024/05/Ripet-ecocompattatore-CFRONT-web.png"
+                  alt="Ripet C-FRONT"
+                  loading="lazy"
+                  decoding="async"
+                  width="800"
+                  height="800"
+                />
+              </div>
+              <div class="product-body">
+                <div class="product-brand">Ripet</div>
+                <h3 class="product-title">C-FRONT</h3>
+                <dl class="product-spec">
+                  <div class="spec-row"><dt>Kapasite</dt><dd>6.000 şişe</dd></div>
+                  <div class="spec-row"><dt>Malzeme</dt><dd>PET</dd></div>
+                </dl>
+              </div>
+            </article>
+
+            <!-- HLZ -->
+            <article class="product card-hover" data-brand="Anker Andersen">
+              <div class="product-media">
+                <span class="tag">En Hızlı</span>
+                <img
+                  src="https://rvmsystems.com.tr/wp-content/uploads/sites/19/2025/01/hlz.jpg"
+                  alt="Anker Andersen HLZ"
+                  loading="lazy"
+                  decoding="async"
+                  width="800"
+                  height="800"
+                />
+              </div>
+              <div class="product-body">
+                <div class="product-brand">Anker Andersen</div>
+                <h3 class="product-title">HLZ</h3>
+                <dl class="product-spec">
+                  <div class="spec-row"><dt>Kapasite</dt><dd>Yüksek</dd></div>
+                  <div class="spec-row"><dt>Hız</dt><dd>100-300/dk</dd></div>
+                  <div class="spec-row"><dt>Malzeme</dt><dd>Tümü</dd></div>
+                </dl>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Products -->
+      <section id="products" class="section">
+        <div class="container">
+          <header class="section-head">
+            <h2 class="section-title">Ürünler</h2>
+            <p class="section-sub">15 farklı depozito iade makinesi, her ihtiyaca uygun çözüm.</p>
+          </header>
+
+          <div class="filters" role="tablist" aria-label="Ürün filtreleri">
+            <button class="filter is-active" type="button" data-filter="all" role="tab" aria-selected="true">Tümü</button>
+            <button class="filter" type="button" data-filter="REVEGO" role="tab" aria-selected="false">REVEGO</button>
+            <button class="filter" type="button" data-filter="RVM Systems" role="tab" aria-selected="false">RVM Systems</button>
+            <button class="filter" type="button" data-filter="Ripet" role="tab" aria-selected="false">Ripet</button>
+            <button class="filter" type="button" data-filter="Anker Andersen" role="tab" aria-selected="false">Anker Andersen</button>
+          </div>
+
+          <div class="grid-products" id="productsGrid">
+            <!-- REVEGO -->
+            <article class="product card-hover" data-brand="REVEGO">
+              <div class="product-media">
+                <img
+                  src="https://revego.net/wp-content/uploads/2025/07/i10t1.jpg"
+                  alt="REVEGO iECO i10"
+                  loading="lazy"
+                  decoding="async"
+                  width="800"
+                  height="800"
+                />
+              </div>
+              <div class="product-body">
+                <div class="product-brand">REVEGO</div>
+                <h3 class="product-title">iECO i10</h3>
+                <dl class="product-spec">
+                  <div class="spec-row"><dt>Kapasite</dt><dd>600 şişe</dd></div>
+                  <div class="spec-row"><dt>Malzeme</dt><dd>Cam</dd></div>
+                </dl>
+              </div>
+            </article>
+
+            <article class="product card-hover" data-brand="REVEGO">
+              <div class="product-media">
+                <img
+                  src="https://revego.net/wp-content/uploads/2025/07/REVEGO-i20.webp"
+                  alt="REVEGO iECO i20"
+                  loading="lazy"
+                  decoding="async"
+                  width="800"
+                  height="800"
+                />
+              </div>
+              <div class="product-body">
+                <div class="product-brand">REVEGO</div>
+                <h3 class="product-title">iECO i20</h3>
+                <dl class="product-spec">
+                  <div class="spec-row"><dt>Kapasite</dt><dd>800 adet</dd></div>
+                  <div class="spec-row"><dt>Malzeme</dt><dd>PET, Kutu</dd></div>
+                </dl>
+              </div>
+            </article>
+
+            <article class="product card-hover" data-brand="REVEGO">
+              <div class="product-media">
+                <img
+                  src="https://revego.net/wp-content/uploads/2025/07/REVEGO-i30.webp"
+                  alt="REVEGO iECO i30"
+                  loading="lazy"
+                  decoding="async"
+                  width="800"
+                  height="800"
+                />
+              </div>
+              <div class="product-body">
+                <div class="product-brand">REVEGO</div>
+                <h3 class="product-title">iECO i30</h3>
+                <dl class="product-spec">
+                  <div class="spec-row"><dt>Kapasite</dt><dd>1.660 adet</dd></div>
+                  <div class="spec-row"><dt>Malzeme</dt><dd>PET, Cam, Kutu</dd></div>
+                </dl>
+              </div>
+            </article>
+
+            <article class="product card-hover" data-brand="REVEGO">
+              <div class="product-media">
+                <span class="tag">Mobil</span>
+                <img
+                  src="https://revego.net/wp-content/uploads/2025/07/REVEGO-iECO-i100.webp"
+                  alt="REVEGO iECO i100"
+                  loading="lazy"
+                  decoding="async"
+                  width="800"
+                  height="800"
+                />
+              </div>
+              <div class="product-body">
+                <div class="product-brand">REVEGO</div>
+                <h3 class="product-title">iECO i100</h3>
+                <dl class="product-spec">
+                  <div class="spec-row"><dt>Kapasite</dt><dd>5.000+ adet</dd></div>
+                  <div class="spec-row"><dt>Hız</dt><dd>120/dk</dd></div>
+                  <div class="spec-row"><dt>Malzeme</dt><dd>Tümü</dd></div>
+                </dl>
+              </div>
+            </article>
+
+            <!-- RVM Systems -->
+            <article class="product card-hover" data-brand="RVM Systems">
+              <div class="product-media">
+                <img
+                  src="https://rvmsystems.com.tr/wp-content/uploads/sites/19/2025/01/rvm-xproline.jpg"
+                  alt="RVM Systems X ProLine"
+                  loading="lazy"
+                  decoding="async"
+                  width="800"
+                  height="800"
+                />
+              </div>
+              <div class="product-body">
+                <div class="product-brand">RVM Systems</div>
+                <h3 class="product-title">X ProLine</h3>
+                <dl class="product-spec">
+                  <div class="spec-row"><dt>Kapasite</dt><dd>Modüler</dd></div>
+                  <div class="spec-row"><dt>Hız</dt><dd>60/dk</dd></div>
+                  <div class="spec-row"><dt>Malzeme</dt><dd>Tümü</dd></div>
+                </dl>
+              </div>
+            </article>
+
+            <article class="product card-hover" data-brand="RVM Systems">
+              <div class="product-media">
+                <span class="tag">Popüler</span>
+                <img
+                  src="https://rvmsystems.com.tr/wp-content/uploads/sites/19/2025/01/rvm-mega-proline.jpg"
+                  alt="RVM Systems Mega ProLine+"
+                  loading="lazy"
+                  decoding="async"
+                  width="800"
+                  height="800"
+                />
+              </div>
+              <div class="product-body">
+                <div class="product-brand">RVM Systems</div>
+                <h3 class="product-title">Mega ProLine+</h3>
+                <dl class="product-spec">
+                  <div class="spec-row"><dt>Kapasite</dt><dd>8 Kabin</dd></div>
+                  <div class="spec-row"><dt>Hız</dt><dd>100/dk</dd></div>
+                  <div class="spec-row"><dt>Malzeme</dt><dd>Tümü</dd></div>
+                </dl>
+              </div>
+            </article>
+
+            <article class="product card-hover" data-brand="RVM Systems">
+              <div class="product-media">
+                <img
+                  src="https://rvmsystems.com.tr/wp-content/uploads/sites/19/2025/01/rvm-x20.jpg"
+                  alt="RVM Systems X20"
+                  loading="lazy"
+                  decoding="async"
+                  width="800"
+                  height="800"
+                />
+              </div>
+              <div class="product-body">
+                <div class="product-brand">RVM Systems</div>
+                <h3 class="product-title">X20</h3>
+                <dl class="product-spec">
+                  <div class="spec-row"><dt>Kapasite</dt><dd>Kompakt</dd></div>
+                  <div class="spec-row"><dt>Hız</dt><dd>50/dk</dd></div>
+                  <div class="spec-row"><dt>Malzeme</dt><dd>PET, Kutu</dd></div>
+                </dl>
+              </div>
+            </article>
+
+            <article class="product card-hover" data-brand="RVM Systems">
+              <div class="product-media">
+                <img
+                  src="https://rvmsystems.com.tr/wp-content/uploads/sites/19/2025/01/rvm-x2.jpg"
+                  alt="RVM Systems X2"
+                  loading="lazy"
+                  decoding="async"
+                  width="800"
+                  height="800"
+                />
+              </div>
+              <div class="product-body">
+                <div class="product-brand">RVM Systems</div>
+                <h3 class="product-title">X2</h3>
+                <dl class="product-spec">
+                  <div class="spec-row"><dt>Kapasite</dt><dd>Kompakt</dd></div>
+                  <div class="spec-row"><dt>Hız</dt><dd>50/dk</dd></div>
+                  <div class="spec-row"><dt>Malzeme</dt><dd>PET, Kutu</dd></div>
+                </dl>
+              </div>
+            </article>
+
+            <article class="product card-hover" data-brand="RVM Systems">
+              <div class="product-media">
+                <img
+                  src="https://rvmsystems.com.tr/wp-content/uploads/sites/19/2025/01/rvm-x3.jpg"
+                  alt="RVM Systems X3"
+                  loading="lazy"
+                  decoding="async"
+                  width="800"
+                  height="800"
+                />
+              </div>
+              <div class="product-body">
+                <div class="product-brand">RVM Systems</div>
+                <h3 class="product-title">X3</h3>
+                <dl class="product-spec">
+                  <div class="spec-row"><dt>Kapasite</dt><dd>Kompakt</dd></div>
+                  <div class="spec-row"><dt>Hız</dt><dd>50/dk</dd></div>
+                  <div class="spec-row"><dt>Malzeme</dt><dd>PET, Cam, Kutu</dd></div>
+                </dl>
+              </div>
+            </article>
+
+            <article class="product card-hover" data-brand="RVM Systems">
+              <div class="product-media">
+                <img
+                  src="https://rvmsystems.com.tr/wp-content/uploads/sites/19/2025/01/rvm-x30.jpg"
+                  alt="RVM Systems X30"
+                  loading="lazy"
+                  decoding="async"
+                  width="800"
+                  height="800"
+                />
+              </div>
+              <div class="product-body">
+                <div class="product-brand">RVM Systems</div>
+                <h3 class="product-title">X30</h3>
+                <dl class="product-spec">
+                  <div class="spec-row"><dt>Kapasite</dt><dd>Geniş</dd></div>
+                  <div class="spec-row"><dt>Hız</dt><dd>50/dk</dd></div>
+                  <div class="spec-row"><dt>Malzeme</dt><dd>PET, Cam, Kutu</dd></div>
+                </dl>
+              </div>
+            </article>
+
+            <!-- Ripet -->
+            <article class="product card-hover" data-brand="Ripet">
+              <div class="product-media">
+                <span class="tag">6x Sıkıştırma</span>
+                <img
+                  src="https://ripet.it/wp-content/uploads/2024/05/Ripet-ecocompattatore-CFRONT-web.png"
+                  alt="Ripet C-FRONT"
+                  loading="lazy"
+                  decoding="async"
+                  width="800"
+                  height="800"
+                />
+              </div>
+              <div class="product-body">
+                <div class="product-brand">Ripet</div>
+                <h3 class="product-title">C-FRONT</h3>
+                <dl class="product-spec">
+                  <div class="spec-row"><dt>Kapasite</dt><dd>6.000 şişe</dd></div>
+                  <div class="spec-row"><dt>Malzeme</dt><dd>PET</dd></div>
+                </dl>
+              </div>
+            </article>
+
+            <article class="product card-hover" data-brand="Ripet">
+              <div class="product-media">
+                <img
+                  src="https://ripet.it/wp-content/uploads/2024/04/Ripet-C-TA.png"
+                  alt="Ripet C-TA"
+                  loading="lazy"
+                  decoding="async"
+                  width="800"
+                  height="800"
+                />
+              </div>
+              <div class="product-body">
+                <div class="product-brand">Ripet</div>
+                <h3 class="product-title">C-TA</h3>
+                <dl class="product-spec">
+                  <div class="spec-row"><dt>Kapasite</dt><dd>3.500 şişe</dd></div>
+                  <div class="spec-row"><dt>Malzeme</dt><dd>PET</dd></div>
+                </dl>
+              </div>
+            </article>
+
+            <article class="product card-hover" data-brand="Ripet">
+              <div class="product-media">
+                <span class="tag">Yeni</span>
+                <img
+                  src="https://ripet.it/wp-content/uploads/2025/10/Ripet-ecocompattatore-Plast-C.png"
+                  alt="Ripet Plast-C"
+                  loading="lazy"
+                  decoding="async"
+                  width="800"
+                  height="800"
+                />
+              </div>
+              <div class="product-body">
+                <div class="product-brand">Ripet</div>
+                <h3 class="product-title">Plast-C</h3>
+                <dl class="product-spec">
+                  <div class="spec-row"><dt>Kapasite</dt><dd>6.000 şişe</dd></div>
+                  <div class="spec-row"><dt>Malzeme</dt><dd>PET</dd></div>
+                </dl>
+              </div>
+            </article>
+
+            <!-- Anker Andersen -->
+            <article class="product card-hover" data-brand="Anker Andersen">
+              <div class="product-media">
+                <span class="tag">En Hızlı</span>
+                <img
+                  src="https://rvmsystems.com.tr/wp-content/uploads/sites/19/2025/01/hlz.jpg"
+                  alt="Anker Andersen HLZ"
+                  loading="lazy"
+                  decoding="async"
+                  width="800"
+                  height="800"
+                />
+              </div>
+              <div class="product-body">
+                <div class="product-brand">Anker Andersen</div>
+                <h3 class="product-title">HLZ</h3>
+                <dl class="product-spec">
+                  <div class="spec-row"><dt>Kapasite</dt><dd>Yüksek</dd></div>
+                  <div class="spec-row"><dt>Hız</dt><dd>100-300/dk</dd></div>
+                  <div class="spec-row"><dt>Malzeme</dt><dd>Tümü</dd></div>
+                </dl>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section class="section">
+        <div class="container">
+          <header class="section-head">
+            <h2 class="section-title">Neden DIM?</h2>
+            <p class="section-sub">Türkiye’nin en kapsamlı depozito iade sistemi çözümleri</p>
+          </header>
+
+          <div class="grid-features">
+            <article class="card card-hover feature">
+              <div class="feature-ico" aria-hidden="true">🌍</div>
+              <h3 class="feature-title">4 Global Marka</h3>
+              <p class="feature-desc">Avrupa’nın lider üreticileri tek çatı altında</p>
+            </article>
+            <article class="card card-hover feature">
+              <div class="feature-ico" aria-hidden="true">⚡</div>
+              <h3 class="feature-title">Yüksek Hız</h3>
+              <p class="feature-desc">Dakikada 300 adede kadar işlem kapasitesi</p>
+            </article>
+            <article class="card card-hover feature">
+              <div class="feature-ico" aria-hidden="true">🎯</div>
+              <h3 class="feature-title">%99.5 Doğruluk</h3>
+              <p class="feature-desc">Yapay zeka destekli optik tanıma sistemi</p>
+            </article>
+            <article class="card card-hover feature">
+              <div class="feature-ico" aria-hidden="true">🔧</div>
+              <h3 class="feature-title">7/24 Destek</h3>
+              <p class="feature-desc">Teknik servis ve bakım garantisi</p>
+            </article>
+            <article class="card card-hover feature">
+              <div class="feature-ico" aria-hidden="true">📊</div>
+              <h3 class="feature-title">IoT Entegrasyon</h3>
+              <p class="feature-desc">Gerçek zamanlı izleme ve raporlama</p>
+            </article>
+            <article class="card card-hover feature">
+              <div class="feature-ico" aria-hidden="true">🌱</div>
+              <h3 class="feature-title">Sürdürülebilirlik</h3>
+              <p class="feature-desc">Çevre dostu döngüsel ekonomi çözümleri</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="section cta">
+        <div class="container">
+          <div class="cta-inner">
+            <h2 class="section-title">Projeniz İçin Teklif Alın</h2>
+            <p class="section-sub">İşletmenize en uygun depozito iade çözümünü birlikte belirleyelim.</p>
+            <a class="btn btn-primary" href="#contact">
+              Ücretsiz Danışmanlık
+              <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M17 8l4 4m0 0-4 4m4-4H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section">
+        <div class="container">
+          <header class="section-head">
+            <h2 class="section-title">İletişim</h2>
+            <p class="section-sub">Projeniz için bizimle iletişime geçin.</p>
+          </header>
+
+          <div class="contact">
+            <div class="contact-info">
+              <div class="info-card">
+                <div class="info-row">
+                  <span class="info-ico" aria-hidden="true">📧</span>
+                  <div>
+                    <div class="info-label">E-posta</div>
+                    <div class="info-value"><a href="mailto:info@deposit.com.tr">info@deposit.com.tr</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="info-card">
+                <div class="info-row">
+                  <span class="info-ico" aria-hidden="true">📞</span>
+                  <div>
+                    <div class="info-label">Telefon</div>
+                    <div class="info-value"><a href="tel:+902120000000">+90 (212) 000 00 00</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="info-card">
+                <div class="info-row">
+                  <span class="info-ico" aria-hidden="true">📍</span>
+                  <div>
+                    <div class="info-label">Adres</div>
+                    <div class="info-value">İstanbul, Türkiye</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="info-card">
+                <div class="info-label">Markalarımız</div>
+                <div class="brand-flags" aria-label="Marka bağlantıları">
+                  <a href="https://revego.net/tr/" target="_blank" rel="noopener noreferrer" title="REVEGO">🇹🇷</a>
+                  <a href="https://rvmsystems.com.tr/" target="_blank" rel="noopener noreferrer" title="RVM Systems">🇸🇪</a>
+                  <a href="https://ripet.it/en/" target="_blank" rel="noopener noreferrer" title="Ripet">🇮🇹</a>
+                  <a href="https://www.anker-andersen.dk/en/" target="_blank" rel="noopener noreferrer" title="Anker Andersen">🇩🇰</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-form card">
+              <div id="formSuccess" class="hidden form-success" role="status" aria-live="polite">
+                <div class="success-mark" aria-hidden="true">✓</div>
+                <h3 class="success-title">Teşekkürler!</h3>
+                <p class="success-sub">En kısa sürede size dönüş yapacağız.</p>
+              </div>
+
+              <form id="contactForm" class="form" novalidate>
+                <div class="form-grid">
+                  <label class="field">
+                    <span class="sr-only">Ad Soyad</span>
+                    <input name="name" autocomplete="name" required placeholder="Ad Soyad" />
+                  </label>
+                  <label class="field">
+                    <span class="sr-only">E-posta</span>
+                    <input name="email" autocomplete="email" type="email" required placeholder="E-posta" />
+                  </label>
+                </div>
+
+                <label class="field">
+                  <span class="sr-only">Telefon</span>
+                  <input name="phone" autocomplete="tel" placeholder="Telefon" />
+                </label>
+
+                <label class="field">
+                  <span class="sr-only">İlgilendiğiniz marka</span>
+                  <select name="brand">
+                    <option value="">İlgilendiğiniz marka</option>
+                    <option>REVEGO</option>
+                    <option>RVM Systems</option>
+                    <option>Ripet</option>
+                    <option>Anker Andersen</option>
+                  </select>
+                </label>
+
+                <label class="field">
+                  <span class="sr-only">Mesajınız</span>
+                  <textarea name="message" required rows="4" placeholder="Mesajınız"></textarea>
+                </label>
+
+                <button class="btn btn-primary w-full" type="submit">Gönder</button>
+                <p class="form-note">Not: Bu form demo amaçlıdır, sunucuya gönderim yapılmaz.</p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <span class="logo-mark" aria-hidden="true">D</span>
+              <div>
+                <span class="text-white font-semibold">deposit</span><span class="text-emerald-400">.com.tr</span>
+              </div>
+            </div>
+            <p class="text-gray-400 text-sm">Türkiye’nin depozito iade sistemleri çözüm ortağı.</p>
+          </div>
+
+          <div>
+            <h4 class="footer-title">Sayfalar</h4>
+            <div class="footer-links">
+              <a href="#home">Ana Sayfa</a>
+              <a href="#products">Ürünler</a>
+              <a href="#brands">Markalar</a>
+              <a href="#contact">İletişim</a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="footer-title">Markalar</h4>
+            <div class="footer-links">
+              <a href="https://revego.net/tr/" target="_blank" rel="noopener noreferrer">🇹🇷 REVEGO</a>
+              <a href="https://rvmsystems.com.tr/" target="_blank" rel="noopener noreferrer">🇸🇪 RVM Systems</a>
+              <a href="https://ripet.it/en/" target="_blank" rel="noopener noreferrer">🇮🇹 Ripet</a>
+              <a href="https://www.anker-andersen.dk/en/" target="_blank" rel="noopener noreferrer">🇩🇰 Anker Andersen</a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="footer-title">İletişim</h4>
+            <div class="footer-meta">
+              <p><a href="mailto:info@deposit.com.tr">info@deposit.com.tr</a></p>
+              <p><a href="tel:+902120000000">+90 (212) 000 00 00</a></p>
+              <p>İstanbul, Türkiye</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="text-gray-500 text-sm">© 2025 DIM - Tüm hakları saklıdır.</p>
+          <div class="footer-flags" aria-label="Marka bağlantıları">
+            <a href="https://revego.net/tr/" target="_blank" rel="noopener noreferrer" title="REVEGO">🇹🇷</a>
+            <a href="https://rvmsystems.com.tr/" target="_blank" rel="noopener noreferrer" title="RVM Systems">🇸🇪</a>
+            <a href="https://ripet.it/en/" target="_blank" rel="noopener noreferrer" title="Ripet">🇮🇹</a>
+            <a href="https://www.anker-andersen.dk/en/" target="_blank" rel="noopener noreferrer" title="Anker Andersen">🇩🇰</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
