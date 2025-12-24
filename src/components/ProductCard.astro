@@ -1,0 +1,80 @@
+---
+import type { Product } from '../data/products';
+
+interface Props {
+	product: Product;
+}
+
+const { product } = Astro.props;
+---
+
+<div class="card-hover rounded-2xl overflow-hidden bg-[#111113]">
+	<!-- Image -->
+	<div class="product-image aspect-square relative overflow-hidden">
+		<img
+			src={product.img}
+			alt={product.name}
+			loading="lazy"
+			class="w-full h-full object-cover transition-opacity duration-300"
+		/>
+		{
+			product.tag && (
+				<span class="absolute top-3 left-3 bg-emerald-500 text-black text-[11px] font-semibold px-2.5 py-1 rounded-md">
+					{product.tag}
+				</span>
+			)
+		}
+	</div>
+
+	<!-- Info -->
+	<div class="p-5">
+		<div class="text-emerald-400 text-xs font-medium mb-1">
+			{product.brand}
+		</div>
+		<h3 class="text-white font-semibold text-lg mb-3">{product.name}</h3>
+
+		<div class="space-y-2 text-sm">
+			<div class="flex justify-between">
+				<span class="text-gray-500">Kapasite</span>
+				<span class="text-gray-300">{product.capacity}</span>
+			</div>
+			{
+				product.speed && (
+					<div class="flex justify-between">
+						<span class="text-gray-500">Hız</span>
+						<span class="text-gray-300">{product.speed}</span>
+					</div>
+				)
+			}
+			<div class="flex justify-between">
+				<span class="text-gray-500">Malzeme</span>
+				<span class="text-gray-300">{product.materials}</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<style>
+	.card-hover {
+		transition: all 0.3s ease;
+		border: 1px solid rgba(255, 255, 255, 0.05);
+	}
+
+	.card-hover:hover {
+		border-color: rgba(16, 185, 129, 0.3);
+		transform: translateY(-2px);
+		box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+	}
+
+	.product-image {
+		background: linear-gradient(145deg, #111113 0%, #0a0a0b 100%);
+	}
+
+	.product-image img {
+		transition: transform 0.4s ease;
+	}
+
+	.product-image:hover img {
+		transform: scale(1.03);
+	}
+</style>

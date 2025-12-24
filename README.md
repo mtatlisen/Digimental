@@ -1,58 +1,128 @@
-# Starlight Starter Kit: Basics
+# DIM - Deposit.com.tr Website
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+Modern, optimized website for deposit return machine systems (Depozito İade Makineleri) in Turkey.
+
+> 📚 **New here?** Start with [QUICKSTART.md](./QUICKSTART.md) or see [INDEX.md](./INDEX.md) for all documentation.
+
+## 🚀 Features
+
+- **Modern Stack**: Built with Astro 5 for optimal performance
+- **Fast Loading**: Static site generation with minimal JavaScript
+- **Responsive Design**: Mobile-first design with Tailwind CSS
+- **SEO Optimized**: Proper meta tags and semantic HTML
+- **TypeScript**: Type-safe code for better maintainability
+- **Interactive Components**: React for interactive elements (contact form, filters)
+
+## 📦 Tech Stack
+
+- **Astro 5**: Static site generator
+- **React 18**: Interactive components
+- **Tailwind CSS**: Utility-first CSS framework
+- **TypeScript**: Type safety
+
+## 🏗️ Project Structure
 
 ```
-npm create astro@latest -- --template starlight
-```
-
-<!-- ASTRO:REMOVE:START -->
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/starlight/tree/main/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/starlight/tree/main/examples/basics)
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/withastro/starlight&create_from_path=examples/basics)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwithastro%2Fstarlight%2Ftree%2Fmain%2Fexamples%2Fbasics&project-name=my-starlight-docs&repository-name=my-starlight-docs)
-
-<!-- ASTRO:REMOVE:END -->
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro + Starlight project, you'll see the following folders and files:
-
-```
-.
+/
 ├── public/
+│   └── favicon.svg
 ├── src/
-│   ├── assets/
-│   ├── content/
-│   │   └── docs/
-│   └── content.config.ts
+│   ├── components/
+│   │   ├── Navbar.astro
+│   │   ├── Footer.astro
+│   │   ├── ProductCard.astro
+│   │   ├── BrandCard.astro
+│   │   └── ContactForm.tsx
+│   ├── data/
+│   │   ├── products.ts
+│   │   └── brands.ts
+│   ├── layouts/
+│   │   └── Layout.astro
+│   └── pages/
+│       ├── index.astro
+│       ├── products.astro
+│       ├── brands.astro
+│       └── contact.astro
 ├── astro.config.mjs
-├── package.json
-└── tsconfig.json
+├── tailwind.config.mjs
+└── package.json
 ```
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+## 🚦 Commands
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+| Command           | Action                                       |
+|:------------------|:---------------------------------------------|
+| `npm install`     | Install dependencies                         |
+| `npm run dev`     | Start dev server at `localhost:4321`         |
+| `npm run build`   | Build production site to `./dist/`           |
+| `npm run preview` | Preview production build locally             |
 
-Static assets, like favicons, can be placed in the `public/` directory.
+## 🎯 Pages
 
-## 🧞 Commands
+- **Home (`/`)**: Hero section, featured products, brands overview
+- **Products (`/products`)**: All products with brand filtering
+- **Brands (`/brands`)**: Detailed brand information with their products
+- **Contact (`/contact`)**: Contact form and information
 
-All commands are run from the root of the project, from a terminal:
+## 🏷️ Brands
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+- **REVEGO** (🇹🇷): Turkish manufacturer, iF 2025 award winner
+- **RVM Systems** (🇸🇪): Swedish leader, 17B+ containers processed
+- **Ripet** (🇮🇹): Italian innovator with RiPress technology
+- **Anker Andersen** (🇩🇰): Industrial solutions, 300/min speed
 
-## 👀 Want to learn more?
+## ⚡ Performance Optimizations
 
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+1. **Static Generation**: All pages pre-rendered at build time
+2. **Image Optimization**: Lazy loading with native `loading="lazy"`
+3. **Minimal JavaScript**: Only interactive components use client-side JS
+4. **CSS Optimization**: Tailwind CSS with purging unused styles
+5. **Font Optimization**: Google Fonts with `display=swap`
+6. **Code Splitting**: Automatic with Astro
+
+## 🎨 Design Features
+
+- Dark theme with emerald accent colors
+- Smooth animations and transitions
+- Gradient text effects
+- Card hover effects
+- Mobile-responsive navigation
+- Accessible UI components
+
+## 📝 Adding New Products
+
+Edit `src/data/products.ts`:
+
+```typescript
+{
+  id: 'unique-id',
+  name: 'Product Name',
+  brand: 'Brand Name',
+  capacity: 'Capacity info',
+  speed: 'Speed info',
+  materials: 'Material types',
+  img: 'Image URL',
+  featured: true/false,
+  tag: 'Optional tag'
+}
+```
+
+## 🔧 Configuration
+
+### Astro Config (`astro.config.mjs`)
+- Tailwind CSS integration
+- React integration for interactive components
+- Static output mode
+
+### Tailwind Config (`tailwind.config.mjs`)
+- Custom animations (fade-in, fade-in-up)
+- Extended color palette
+- Inter font family
+
+## 📄 License
+
+Private - All rights reserved © 2025 DIM
+
+---
+
+Built with ❤️ using Astro

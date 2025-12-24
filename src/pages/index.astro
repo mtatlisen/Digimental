@@ -1,0 +1,281 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProductCard from '../components/ProductCard.astro';
+import BrandCard from '../components/BrandCard.astro';
+import { products } from '../data/products';
+import { brands } from '../data/brands';
+
+const featuredProducts = products.filter((p) => p.featured);
+---
+
+<Layout
+	title="DIM - Deposit.com.tr | Depozito İade Makineleri"
+	description="4 global marka, 15 farklı ürün. REVEGO, RVM Systems, Ripet ve Anker Andersen'in Türkiye distribütörüyüz."
+>
+	<!-- Hero -->
+	<section
+		class="min-h-screen flex items-center justify-center relative overflow-hidden"
+	>
+		<!-- Background gradients -->
+		<div class="absolute inset-0 z-0">
+			<div class="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-950/50 to-slate-950">
+			</div>
+		</div>
+
+		<div class="absolute inset-0 z-[1]">
+			<div
+				class="absolute top-0 left-1/4 w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-[150px]"
+			>
+			</div>
+			<div
+				class="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-cyan-500/10 rounded-full blur-[120px]"
+			>
+			</div>
+		</div>
+
+		<div class="relative z-10 max-w-5xl mx-auto px-6 text-center pt-20">
+			<!-- Badge -->
+			<div
+				class="fade-in-up inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-2 mb-8"
+			>
+				<span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse">
+				</span>
+				<span class="text-gray-400 text-sm"
+					>Depozito İade Sistemleri Türkiye</span
+				>
+			</div>
+
+			<!-- Headline -->
+			<h1
+				class="fade-in-up fade-in-delay-1 text-5xl md:text-7xl font-bold text-white mb-6 leading-[1.1]"
+			>
+				Geleceğin<br />
+				<span class="gradient-text">Geri Dönüşüm</span><br />
+				Teknolojisi
+			</h1>
+
+			<!-- Subtitle -->
+			<p
+				class="fade-in-up fade-in-delay-2 text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed"
+			>
+				4 global marka, 15 farklı ürün. REVEGO, RVM Systems, Ripet ve
+				Anker Andersen'in Türkiye distribütörüyüz.
+			</p>
+
+			<!-- CTA -->
+			<div
+				class="fade-in-up fade-in-delay-3 flex flex-col sm:flex-row gap-4 justify-center"
+			>
+				<a
+					href="/products"
+					class="bg-emerald-500 hover:bg-emerald-400 text-black font-semibold px-8 py-4 rounded-xl transition-colors inline-flex items-center justify-center gap-2"
+				>
+					Ürünleri İncele
+					<svg
+						class="w-5 h-5"
+						fill="none"
+						stroke="currentColor"
+						viewBox="0 0 24 24"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+					</svg>
+				</a>
+				<a
+					href="/contact"
+					class="bg-white/5 hover:bg-white/10 border border-white/10 text-white font-semibold px-8 py-4 rounded-xl transition-colors"
+				>
+					İletişime Geç
+				</a>
+			</div>
+
+			<!-- Stats -->
+			<div
+				class="fade-in-up fade-in-delay-4 grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-10 border-t border-white/5"
+			>
+				{
+					[
+						{ value: '4', label: 'Global Marka' },
+						{ value: '15', label: 'Farklı Ürün' },
+						{ value: '300/dk', label: 'Max Hız' },
+						{ value: '%99.5', label: 'Doğruluk' },
+					].map((stat) => (
+						<div class="text-center">
+							<div class="text-3xl md:text-4xl font-bold text-white mb-1">
+								{stat.value}
+							</div>
+							<div class="text-gray-500 text-sm">{stat.label}</div>
+						</div>
+					))
+				}
+			</div>
+		</div>
+	</section>
+
+	<!-- Brands -->
+	<section class="py-24 px-6">
+		<div class="max-w-7xl mx-auto">
+			<div class="text-center mb-12">
+				<h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+					Global Markalar
+				</h2>
+				<p class="text-gray-500 max-w-xl mx-auto">
+					Avrupa'nın lider depozito iade makinesi üreticilerinin
+					Türkiye distribütörüyüz.
+				</p>
+			</div>
+
+			<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+				{brands.map((b) => <BrandCard brand={b} />)}
+			</div>
+		</div>
+	</section>
+
+	<!-- Featured Products -->
+	<section class="py-24 px-6 bg-[#0d0d0e]">
+		<div class="max-w-7xl mx-auto">
+			<div
+				class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12"
+			>
+				<div>
+					<h2 class="text-3xl md:text-4xl font-bold text-white mb-2">
+						Öne Çıkan Ürünler
+					</h2>
+					<p class="text-gray-500">
+						En popüler depozito iade makinelerimiz
+					</p>
+				</div>
+				<a
+					href="/products"
+					class="text-emerald-400 hover:text-emerald-300 font-medium inline-flex items-center gap-2 transition-colors"
+				>
+					Tüm Ürünler
+					<svg
+						class="w-4 h-4"
+						fill="none"
+						stroke="currentColor"
+						viewBox="0 0 24 24"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M9 5l7 7-7 7"></path>
+					</svg>
+				</a>
+			</div>
+
+			<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+				{featuredProducts.map((p) => <ProductCard product={p} />)}
+			</div>
+		</div>
+	</section>
+
+	<!-- Features -->
+	<section class="py-24 px-6">
+		<div class="max-w-7xl mx-auto">
+			<div class="text-center mb-12">
+				<h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+					Neden DIM?
+				</h2>
+				<p class="text-gray-500 max-w-xl mx-auto">
+					Türkiye'nin en kapsamlı depozito iade sistemi çözümleri
+				</p>
+			</div>
+
+			<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+				{
+					[
+						{
+							icon: '🌍',
+							title: '4 Global Marka',
+							desc: "Avrupa'nın lider üreticileri tek çatı altında",
+						},
+						{
+							icon: '⚡',
+							title: 'Yüksek Hız',
+							desc: 'Dakikada 300 adede kadar işlem kapasitesi',
+						},
+						{
+							icon: '🎯',
+							title: '%99.5 Doğruluk',
+							desc: 'Yapay zeka destekli optik tanıma sistemi',
+						},
+						{
+							icon: '🔧',
+							title: '7/24 Destek',
+							desc: 'Teknik servis ve bakım garantisi',
+						},
+						{
+							icon: '📊',
+							title: 'IoT Entegrasyon',
+							desc: 'Gerçek zamanlı izleme ve raporlama',
+						},
+						{
+							icon: '🌱',
+							title: 'Sürdürülebilirlik',
+							desc: 'Çevre dostu döngüsel ekonomi çözümleri',
+						},
+					].map((f) => (
+						<div class="card-hover p-6 rounded-2xl bg-[#111113]">
+							<div class="text-3xl mb-4">{f.icon}</div>
+							<h3 class="text-white font-semibold text-lg mb-2">
+								{f.title}
+							</h3>
+							<p class="text-gray-500 text-sm leading-relaxed">
+								{f.desc}
+							</p>
+						</div>
+					))
+				}
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA -->
+	<section class="py-24 px-6 bg-gradient-to-b from-emerald-500/5 to-transparent">
+		<div class="max-w-3xl mx-auto text-center">
+			<h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+				Projeniz İçin Teklif Alın
+			</h2>
+			<p class="text-gray-400 mb-8">
+				İşletmenize en uygun depozito iade çözümünü birlikte
+				belirleyelim.
+			</p>
+			<a
+				href="/contact"
+				class="bg-emerald-500 hover:bg-emerald-400 text-black font-semibold px-10 py-4 rounded-xl transition-colors inline-flex items-center gap-2"
+			>
+				Ücretsiz Danışmanlık
+				<svg
+					class="w-5 h-5"
+					fill="none"
+					stroke="currentColor"
+					viewBox="0 0 24 24"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+				</svg>
+			</a>
+		</div>
+	</section>
+
+	<style>
+		.card-hover {
+			transition: all 0.3s ease;
+			border: 1px solid rgba(255, 255, 255, 0.05);
+		}
+
+		.card-hover:hover {
+			border-color: rgba(16, 185, 129, 0.3);
+			transform: translateY(-2px);
+			box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+		}
+	</style>
+</Layout>

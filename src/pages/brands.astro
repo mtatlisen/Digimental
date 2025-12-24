@@ -1,0 +1,93 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { brands } from '../data/brands';
+import { products } from '../data/products';
+---
+
+<Layout
+	title="Markalar | DIM - Deposit.com.tr"
+	description="4 global lider, tek çatı altında."
+>
+	<div class="pt-24 pb-20 px-6 min-h-screen">
+		<div class="max-w-7xl mx-auto">
+			<!-- Header -->
+			<div class="text-center mb-12">
+				<h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+					Markalar
+				</h1>
+				<p class="text-gray-500 max-w-xl mx-auto">
+					4 global lider, tek çatı altında.
+				</p>
+			</div>
+
+			<!-- Brands with products -->
+			<div class="space-y-12">
+				{
+					brands.map((brand) => {
+						const brandProducts = products.filter(
+							(p) => p.brand === brand.name
+						);
+						return (
+							<div class="bg-[#111113] rounded-3xl overflow-hidden border border-white/5">
+								{/* Brand header */}
+								<div class="p-8 flex flex-col md:flex-row md:items-center gap-6">
+									<span class="text-6xl">{brand.flag}</span>
+									<div class="flex-1">
+										<h2 class="text-2xl font-bold text-white mb-1">
+											{brand.name}
+										</h2>
+										<p class="text-gray-500">
+											{brand.country} · {brand.tagline}
+										</p>
+									</div>
+									<a
+										href={brand.url}
+										target="_blank"
+										rel="noopener noreferrer"
+										class="bg-white/5 hover:bg-emerald-500 hover:text-black text-white font-medium px-6 py-3 rounded-xl transition-all inline-flex items-center gap-2"
+									>
+										Web Sitesi
+										<svg
+											class="w-4 h-4"
+											fill="none"
+											stroke="currentColor"
+											viewBox="0 0 24 24"
+										>
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												stroke-width="2"
+												d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+											/>
+										</svg>
+									</a>
+								</div>
+
+								{/* Products */}
+								<div class="border-t border-white/5 p-6 bg-black/20">
+									<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+										{brandProducts.map((p) => (
+											<div class="bg-[#0a0a0b] rounded-xl p-4 border border-white/5">
+												<div class="text-white font-medium mb-1">
+													{p.name}
+												</div>
+												<div class="text-gray-500 text-sm">
+													{p.capacity}
+												</div>
+												{p.speed && (
+													<div class="text-emerald-400 text-sm mt-1">
+														⚡ {p.speed}
+													</div>
+												)}
+											</div>
+										))}
+									</div>
+								</div>
+							</div>
+						);
+					})
+				}
+			</div>
+		</div>
+	</div>
+</Layout>

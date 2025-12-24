@@ -1,0 +1,55 @@
+---
+import type { Brand } from '../data/brands';
+
+interface Props {
+	brand: Brand;
+}
+
+const { brand } = Astro.props;
+---
+
+<a
+	href={brand.url}
+	target="_blank"
+	rel="noopener noreferrer"
+	class="card-hover block p-6 rounded-2xl bg-[#111113] group"
+>
+	<div class="flex items-start gap-4">
+		<span class="text-4xl">{brand.flag}</span>
+		<div class="flex-1">
+			<h3
+				class="text-white font-semibold text-lg group-hover:text-emerald-400 transition-colors"
+			>
+				{brand.name}
+			</h3>
+			<p class="text-gray-500 text-sm">{brand.country}</p>
+			<p class="text-gray-400 text-sm mt-2">{brand.tagline}</p>
+		</div>
+		<svg
+			class="w-5 h-5 text-gray-600 group-hover:text-emerald-400 transition-colors"
+			fill="none"
+			stroke="currentColor"
+			viewBox="0 0 24 24"
+		>
+			<path
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				stroke-width="2"
+				d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+			></path>
+		</svg>
+	</div>
+</a>
+
+<style>
+	.card-hover {
+		transition: all 0.3s ease;
+		border: 1px solid rgba(255, 255, 255, 0.05);
+	}
+
+	.card-hover:hover {
+		border-color: rgba(16, 185, 129, 0.3);
+		transform: translateY(-2px);
+		box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+	}
+</style>

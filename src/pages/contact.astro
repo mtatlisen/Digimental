@@ -1,0 +1,90 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ContactForm from '../components/ContactForm';
+import { brands } from '../data/brands';
+---
+
+<Layout
+	title="İletişim | DIM - Deposit.com.tr"
+	description="Projeniz için bizimle iletişime geçin."
+>
+	<div class="pt-24 pb-20 px-6 min-h-screen">
+		<div class="max-w-4xl mx-auto">
+			<!-- Header -->
+			<div class="text-center mb-12">
+				<h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+					İletişim
+				</h1>
+				<p class="text-gray-500">
+					Projeniz için bizimle iletişime geçin.
+				</p>
+			</div>
+
+			<div class="grid md:grid-cols-5 gap-8">
+				<!-- Info -->
+				<div class="md:col-span-2 space-y-4">
+					{
+						[
+							{
+								icon: '📧',
+								label: 'E-posta',
+								value: 'info@deposit.com.tr',
+							},
+							{
+								icon: '📞',
+								label: 'Telefon',
+								value: '+90 (212) 000 00 00',
+							},
+							{
+								icon: '📍',
+								label: 'Adres',
+								value: 'İstanbul, Türkiye',
+							},
+						].map((item) => (
+							<div class="bg-[#111113] border border-white/5 rounded-xl p-5">
+								<div class="flex items-center gap-4">
+									<span class="text-2xl">{item.icon}</span>
+									<div>
+										<div class="text-gray-500 text-xs mb-0.5">
+											{item.label}
+										</div>
+										<div class="text-white font-medium">
+											{item.value}
+										</div>
+									</div>
+								</div>
+							</div>
+						))
+					}
+
+					<!-- Brands -->
+					<div class="bg-[#111113] border border-white/5 rounded-xl p-5">
+						<div class="text-gray-500 text-xs mb-3">
+							Markalarımız
+						</div>
+						<div class="flex gap-3">
+							{
+								brands.map((b) => (
+									<a
+										href={b.url}
+										target="_blank"
+										rel="noopener noreferrer"
+										class="text-2xl hover:scale-110 transition-transform"
+										title={b.name}
+									>
+										{b.flag}
+									</a>
+								))
+							}
+						</div>
+					</div>
+				</div>
+
+				<!-- Form -->
+				<div class="md:col-span-3">
+					<ContactForm client:load brands={brands} />
+				</div>
+			</div>
+		</div>
+	</div>
+</Layout>

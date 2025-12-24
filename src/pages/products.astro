@@ -1,0 +1,105 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProductCard from '../components/ProductCard.astro';
+import { products } from '../data/products';
+import { brands } from '../data/brands';
+---
+
+<Layout
+	title="Ürünler | DIM - Deposit.com.tr"
+	description="15 farklı depozito iade makinesi, her ihtiyaca uygun çözüm."
+>
+	<div class="pt-24 pb-20 px-6 min-h-screen">
+		<div class="max-w-7xl mx-auto">
+			<!-- Header -->
+			<div class="text-center mb-12">
+				<h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+					Ürünler
+				</h1>
+				<p class="text-gray-500 max-w-xl mx-auto">
+					15 farklı depozito iade makinesi, her ihtiyaca uygun çözüm.
+				</p>
+			</div>
+
+			<!-- Filters -->
+			<div
+				id="filters"
+				class="flex flex-wrap justify-center gap-2 mb-12"
+			>
+				<button
+					class="filter-btn active px-5 py-2.5 rounded-lg text-sm font-medium transition-all"
+					data-filter="all"
+				>
+					Tümü
+				</button>
+				{
+					brands.map((brand) => (
+						<button
+							class="filter-btn px-5 py-2.5 rounded-lg text-sm font-medium transition-all"
+							data-filter={brand.name}
+						>
+							{brand.name}
+						</button>
+					))
+				}
+			</div>
+
+			<!-- Grid -->
+			<div
+				id="products-grid"
+				class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+			>
+				{
+					products.map((p) => (
+						<div class="product-item" data-brand={p.brand}>
+							<ProductCard product={p} />
+						</div>
+					))
+				}
+			</div>
+		</div>
+	</div>
+
+	<script>
+		// Filter functionality
+		const filterButtons = document.querySelectorAll('.filter-btn');
+		const productItems = document.querySelectorAll('.product-item');
+
+		filterButtons.forEach((btn) => {
+			btn.addEventListener('click', () => {
+				const filter = btn.getAttribute('data-filter');
+
+				// Update active button
+				filterButtons.forEach((b) => b.classList.remove('active'));
+				btn.classList.add('active');
+
+				// Filter products
+				productItems.forEach((item) => {
+					const brand = item.getAttribute('data-brand');
+					if (filter === 'all' || brand === filter) {
+						item.style.display = 'block';
+					} else {
+						item.style.display = 'none';
+					}
+				});
+			});
+		});
+	</script>
+
+	<style>
+		.filter-btn {
+			background: rgba(255, 255, 255, 0.05);
+			color: rgb(156, 163, 175);
+		}
+
+		.filter-btn:hover {
+			background: rgba(255, 255, 255, 0.1);
+			color: white;
+		}
+
+		.filter-btn.active {
+			background: #10b981;
+			color: black;
+		}
+	</style>
+</Layout>

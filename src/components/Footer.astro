@@ -1,0 +1,102 @@
+---
+import { brands } from '../data/brands';
+
+const navigation = [
+	{ label: 'Ana Sayfa', href: '/' },
+	{ label: 'Ürünler', href: '/products' },
+	{ label: 'Markalar', href: '/brands' },
+	{ label: 'İletişim', href: '/contact' },
+];
+---
+
+<footer class="border-t border-white/5 bg-black/50">
+	<div class="max-w-7xl mx-auto px-6 py-16">
+		<div class="grid grid-cols-2 md:grid-cols-4 gap-10">
+			<!-- Brand -->
+			<div class="col-span-2 md:col-span-1">
+				<div class="flex items-center gap-3 mb-4">
+					<div
+						class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center"
+					>
+						<span class="text-black font-bold text-lg">D</span>
+					</div>
+					<div>
+						<span class="text-white font-semibold">deposit</span>
+						<span class="text-emerald-400">.com.tr</span>
+					</div>
+				</div>
+				<p class="text-gray-500 text-sm leading-relaxed">
+					Türkiye'nin depozito iade sistemleri çözüm ortağı.
+				</p>
+			</div>
+
+			<!-- Links -->
+			<div>
+				<h4 class="text-white font-medium mb-4">Sayfalar</h4>
+				<div class="space-y-2">
+					{
+						navigation.map((item) => (
+							<a
+								href={item.href}
+								class="block text-gray-500 hover:text-emerald-400 text-sm transition-colors"
+							>
+								{item.label}
+							</a>
+						))
+					}
+				</div>
+			</div>
+
+			<!-- Brands -->
+			<div>
+				<h4 class="text-white font-medium mb-4">Markalar</h4>
+				<div class="space-y-2">
+					{
+						brands.map((b) => (
+							<a
+								href={b.url}
+								target="_blank"
+								rel="noopener noreferrer"
+								class="block text-gray-500 hover:text-emerald-400 text-sm transition-colors"
+							>
+								{b.flag} {b.name}
+							</a>
+						))
+					}
+				</div>
+			</div>
+
+			<!-- Contact -->
+			<div>
+				<h4 class="text-white font-medium mb-4">İletişim</h4>
+				<div class="space-y-2 text-gray-500 text-sm">
+					<p>info@deposit.com.tr</p>
+					<p>+90 (212) 000 00 00</p>
+					<p>İstanbul, Türkiye</p>
+				</div>
+			</div>
+		</div>
+
+		<div
+			class="border-t border-white/5 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4"
+		>
+			<p class="text-gray-600 text-sm">
+				© 2025 DIM - Tüm hakları saklıdır.
+			</p>
+			<div class="flex gap-6">
+				{
+					brands.map((b) => (
+						<a
+							href={b.url}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="text-2xl hover:scale-110 transition-transform"
+						>
+							{b.flag}
+						</a>
+					))
+				}
+			</div>
+		</div>
+	</div>
+</footer>
