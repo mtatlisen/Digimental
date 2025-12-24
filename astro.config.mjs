@@ -1,12 +1,14 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import react from '@astrojs/react';
+import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: 'Deposit.com.tr',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
 			sidebar: [
 				{
@@ -22,5 +24,7 @@ export default defineConfig({
 				},
 			],
 		}),
+		react(),
+		tailwind(),
 	],
 });
