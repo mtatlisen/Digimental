@@ -1,58 +1,49 @@
-# Starlight Starter Kit: Basics
+# DIM - Deposit.com.tr
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+Türkiye'nin depozito iade sistemleri çözüm ortağı. REVEGO, RVM Systems, Ripet ve Anker Andersen distribütörü.
 
-```
-npm create astro@latest -- --template starlight
-```
+## 🚀 Teknolojiler
 
-<!-- ASTRO:REMOVE:START -->
+- **Astro** - Modern web framework (SSR + Static Site Generation)
+- **React** - İnteraktif component'ler için
+- **Tailwind CSS** - Utility-first CSS framework
+- **TypeScript** - Type-safe kod
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/starlight/tree/main/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/starlight/tree/main/examples/basics)
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/withastro/starlight&create_from_path=examples/basics)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwithastro%2Fstarlight%2Ftree%2Fmain%2Fexamples%2Fbasics&project-name=my-starlight-docs&repository-name=my-starlight-docs)
+## 📦 Kurulum
 
-<!-- ASTRO:REMOVE:END -->
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro + Starlight project, you'll see the following folders and files:
-
-```
-.
-├── public/
-├── src/
-│   ├── assets/
-│   ├── content/
-│   │   └── docs/
-│   └── content.config.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
+```bash
+npm install
 ```
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+## 🛠️ Geliştirme
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+```bash
+npm run dev
+```
 
-Static assets, like favicons, can be placed in the `public/` directory.
+Site `http://localhost:4321` adresinde çalışacaktır.
 
-## 🧞 Commands
+## 🏗️ Build
 
-All commands are run from the root of the project, from a terminal:
+```bash
+npm run build
+```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## ✨ Optimizasyonlar
 
-## 👀 Want to learn more?
+- ✅ Server-side rendering (SSR) ile hızlı ilk yükleme
+- ✅ Code splitting ve lazy loading
+- ✅ SEO optimizasyonları (meta tags, Open Graph)
+- ✅ Erişilebilirlik iyileştirmeleri (ARIA labels, semantic HTML)
+- ✅ Performans optimizasyonları (image lazy loading, passive event listeners)
+- ✅ Modern build sistemi (Astro ile production-ready output)
 
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+## 📁 Proje Yapısı
+
+```
+src/
+├── components/     # React ve Astro component'leri
+├── data/          # Veri dosyaları (products, brands)
+├── layouts/       # Layout component'leri
+└── pages/         # Sayfa route'ları
+```

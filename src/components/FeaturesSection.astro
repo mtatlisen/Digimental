@@ -1,0 +1,31 @@
+---
+const features = [
+	{ icon: '🌍', title: '4 Global Marka', desc: 'Avrupa\'nın lider üreticileri tek çatı altında' },
+	{ icon: '⚡', title: 'Yüksek Hız', desc: 'Dakikada 300 adede kadar işlem kapasitesi' },
+	{ icon: '🎯', title: '%99.5 Doğruluk', desc: 'Yapay zeka destekli optik tanıma sistemi' },
+	{ icon: '🔧', title: '7/24 Destek', desc: 'Teknik servis ve bakım garantisi' },
+	{ icon: '📊', title: 'IoT Entegrasyon', desc: 'Gerçek zamanlı izleme ve raporlama' },
+	{ icon: '🌱', title: 'Sürdürülebilirlik', desc: 'Çevre dostu döngüsel ekonomi çözümleri' },
+];
+---
+
+<section class="py-24 px-6">
+	<div class="max-w-7xl mx-auto">
+		<div class="text-center mb-12">
+			<h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Neden DIM?</h2>
+			<p class="text-gray-500 max-w-xl mx-auto">
+				Türkiye'nin en kapsamlı depozito iade sistemi çözümleri
+			</p>
+		</div>
+
+		<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+			{features.map((f) => (
+				<div class="card-hover p-6 rounded-2xl bg-[#111113]">
+					<div class="text-3xl mb-4" aria-hidden="true">{f.icon}</div>
+					<h3 class="text-white font-semibold text-lg mb-2">{f.title}</h3>
+					<p class="text-gray-500 text-sm leading-relaxed">{f.desc}</p>
+				</div>
+			))}
+		</div>
+	</div>
+</section>
