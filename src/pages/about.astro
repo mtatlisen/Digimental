@@ -1,0 +1,119 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="About - Carbon Agent">
+	<Header />
+	<main class="flex-1">
+		<!-- Hero Section -->
+		<div class="relative w-full flex flex-col items-center justify-center pt-12 pb-16 px-4 md:px-10">
+			<div class="max-w-[1280px] w-full flex flex-col md:flex-row gap-12 items-center">
+				<!-- Text Content -->
+				<div class="flex flex-col gap-6 md:w-1/2 md:pr-8">
+					<div class="flex flex-col gap-4">
+						<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 w-fit">
+							<span class="material-symbols-outlined text-primary text-sm">verified</span>
+							<span class="text-primary text-xs font-bold uppercase tracking-wider">ISO 14064-1:2018 Compliant</span>
+						</div>
+						<h1 class="text-[#0d1c17] dark:text-white text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] tracking-[-0.033em]">
+							Carbon Accounting, <br class="hidden lg:block" />Simplified for Enterprise
+						</h1>
+						<p class="text-[#0d1c17]/80 dark:text-white/80 text-lg font-normal leading-relaxed max-w-[600px]">
+							Meet Carbon Agent: The science-backed platform for precise corporate footprint management and reporting. We turn complex climate data into audit-ready insights.
+						</p>
+					</div>
+					<div class="flex flex-col sm:flex-row gap-3 pt-2">
+						<button class="flex items-center justify-center rounded-lg h-12 px-6 bg-primary hover:bg-primary-dark transition-all text-[#0d1c17] text-base font-bold tracking-[0.015em] shadow-lg shadow-primary/20">
+							Request Demo
+						</button>
+						<button class="flex items-center justify-center rounded-lg h-12 px-6 bg-white dark:bg-white/10 border border-[#e7f4ef] dark:border-white/10 hover:bg-gray-50 dark:hover:bg-white/20 transition-all text-[#0d1c17] dark:text-white text-base font-bold tracking-[0.015em]">
+							Explore Methodology
+						</button>
+					</div>
+				</div>
+				<!-- Hero Image -->
+				<div class="md:w-1/2 w-full h-full relative">
+					<div class="aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-2xl relative bg-gray-100 dark:bg-gray-800">
+						<div class="absolute inset-0 bg-gradient-to-tr from-background-light to-transparent opacity-20 z-10"></div>
+						<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC8geaMLLu9nnG9kVn-5dpNT_hVxvJGZsPE8OO7228-6aa2r26u9HuACyN1ju1jUXQxfcLxVPICCe7a3Ps4h75_Anw2krI1f-hu7f1G2tfrCS-Qv0Rp3D3o2GoE3w3p7r-xsLo6rDQUWSZe-x2iEe7JMgHMRV5ImwzChavSmBxImbBcmmPjKF-3XnyvamHbYdDV-fVJJ6mKqAXs-5h5Q4DyVzd8WFqbimRkUkD-YIujZ-Kvi7mwQhTJ2XOEfaVhLBGkkpET7OkNzUY');"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Mission Section -->
+		<div class="py-20 px-4 md:px-10 bg-[#f8fcfb] dark:bg-background-dark">
+			<div class="max-w-[960px] mx-auto text-center flex flex-col gap-6">
+				<h2 class="text-primary text-sm font-bold tracking-widest uppercase">Our Mission</h2>
+				<h3 class="text-[#0d1c17] dark:text-white text-3xl md:text-4xl font-bold leading-tight">
+					Empowering a Net-Zero Future through Radical Transparency
+				</h3>
+				<p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+					We believe that you can't manage what you can't measure. Carbon Agent was founded by a team of environmental scientists and data engineers with a singular goal: to make high-fidelity carbon accounting accessible, automated, and actionable for enterprises worldwide.
+				</p>
+			</div>
+		</div>
+
+		<!-- Features / Value Prop -->
+		<div class="py-16 px-4 md:px-10 bg-white dark:bg-[#0c1a15]">
+			<div class="max-w-[1280px] mx-auto">
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+					<!-- Card 1 -->
+					<div class="group p-8 rounded-2xl bg-[#f8fcfb] dark:bg-white/5 border border-[#e7f4ef] dark:border-white/10 hover:border-primary/50 transition-colors">
+						<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-[#0d1c17] transition-colors">
+							<span class="material-symbols-outlined text-2xl">calculate</span>
+						</div>
+						<h4 class="text-xl font-bold text-[#0d1c17] dark:text-white mb-3">Scientific Precision</h4>
+						<p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+							Our calculation engine covers Scope 1, 2, and 3 emissions, utilizing over 50,000 emission factors updated monthly to ensure your data is always accurate.
+						</p>
+					</div>
+					<!-- Card 2 -->
+					<div class="group p-8 rounded-2xl bg-[#f8fcfb] dark:bg-white/5 border border-[#e7f4ef] dark:border-white/10 hover:border-primary/50 transition-colors">
+						<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-[#0d1c17] transition-colors">
+							<span class="material-symbols-outlined text-2xl">rule</span>
+						</div>
+						<h4 class="text-xl font-bold text-[#0d1c17] dark:text-white mb-3">Audit-Ready Reporting</h4>
+						<p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+							Generate ISO-compliant reports in one click. Our trail of evidence logs every data point modification, simplifying third-party verification and assurance.
+						</p>
+					</div>
+					<!-- Card 3 -->
+					<div class="group p-8 rounded-2xl bg-[#f8fcfb] dark:bg-white/5 border border-[#e7f4ef] dark:border-white/10 hover:border-primary/50 transition-colors">
+						<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-[#0d1c17] transition-colors">
+							<span class="material-symbols-outlined text-2xl">hub</span>
+						</div>
+						<h4 class="text-xl font-bold text-[#0d1c17] dark:text-white mb-3">Automated Integrations</h4>
+						<p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+							Connect directly to your ERP, utility providers, and travel management systems. Eliminate manual spreadsheets and reduce human error by 90%.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- CTA Footer -->
+		<div class="py-24 px-4 md:px-10 bg-[#f8fcfb] dark:bg-background-dark border-t border-[#e7f4ef] dark:border-white/10">
+			<div class="max-w-[1280px] mx-auto bg-gradient-to-br from-[#0bda95] to-[#09b078] rounded-3xl p-10 md:p-20 text-center relative overflow-hidden">
+				<!-- Decorative circles -->
+				<div class="absolute top-0 left-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+				<div class="absolute bottom-0 right-0 w-64 h-64 bg-black/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+				<div class="relative z-10 flex flex-col items-center max-w-2xl mx-auto">
+					<h2 class="text-[#0d1c17] text-3xl md:text-5xl font-black mb-6 tracking-tight">Ready to master your carbon footprint?</h2>
+					<p class="text-[#0d1c17]/80 text-lg mb-8 font-medium">Join over 500 enterprises using Carbon Agent to measure, report, and reduce their emissions.</p>
+					<div class="flex flex-col sm:flex-row gap-4 w-full justify-center">
+						<button class="flex min-w-[160px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-[#0d1c17] text-white text-base font-bold leading-normal tracking-[0.015em] hover:scale-105 transition-transform">
+							Get a Demo
+						</button>
+						<button class="flex min-w-[160px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-white text-[#0d1c17] text-base font-bold leading-normal tracking-[0.015em] hover:bg-gray-50 transition-colors">
+							Contact Sales
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<Footer />
+</Layout>

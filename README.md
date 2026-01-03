@@ -1,44 +1,31 @@
-# Starlight Starter Kit: Basics
+# Carbon Agent Website
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
-
-```
-npm create astro@latest -- --template starlight
-```
-
-<!-- ASTRO:REMOVE:START -->
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/starlight/tree/main/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/starlight/tree/main/examples/basics)
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/withastro/starlight&create_from_path=examples/basics)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwithastro%2Fstarlight%2Ftree%2Fmain%2Fexamples%2Fbasics&project-name=my-starlight-docs&repository-name=my-starlight-docs)
-
-<!-- ASTRO:REMOVE:END -->
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+A modern, responsive website for Carbon Agent - Corporate Carbon Footprint Management Platform.
 
 ## 🚀 Project Structure
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
-
 ```
-.
+/
 ├── public/
+│   └── favicon.svg
 ├── src/
-│   ├── assets/
-│   ├── content/
-│   │   └── docs/
-│   └── content.config.ts
+│   ├── components/
+│   │   ├── Header.astro
+│   │   └── Footer.astro
+│   ├── layouts/
+│   │   └── Layout.astro
+│   └── pages/
+│       ├── index.astro
+│       ├── about.astro
+│       ├── blog.astro
+│       ├── contact.astro
+│       ├── customers.astro
+│       ├── platform.astro
+│       └── pricing.astro
 ├── astro.config.mjs
-├── package.json
-└── tsconfig.json
+├── tailwind.config.mjs
+└── package.json
 ```
-
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
-
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
-
-Static assets, like favicons, can be placed in the `public/` directory.
 
 ## 🧞 Commands
 
@@ -50,9 +37,43 @@ All commands are run from the root of the project, from a terminal:
 | `npm run dev`             | Starts local dev server at `localhost:4321`      |
 | `npm run build`           | Build your production site to `./dist/`          |
 | `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+## 📚 Pages
 
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+- **Home** (`/`) - Main landing page with hero, features, and CTA
+- **Platform** (`/platform`) - Platform features and capabilities
+- **Pricing** (`/pricing`) - Pricing tiers and plans
+- **Customers** (`/customers`) - Customer testimonials and case studies
+- **Blog** (`/blog`) - Blog articles and resources
+- **About** (`/about`) - Company information and mission
+- **Contact** (`/contact`) - Contact form and information
+
+## 🎨 Tech Stack
+
+- **Framework**: Astro 5.6.1
+- **Styling**: Tailwind CSS 3.4
+- **Fonts**: Google Fonts (Inter, Noto Sans)
+- **Icons**: Material Symbols
+- **Image Optimization**: Sharp
+
+## 🌙 Features
+
+- Responsive design for all screen sizes
+- Dark mode support
+- Modern UI components
+- SEO-friendly structure
+- Fast page loads with Astro
+- Accessible navigation
+- Professional business design
+
+## 🔧 Configuration
+
+The site uses a custom Tailwind configuration with Carbon Agent brand colors:
+
+- Primary: `#0bda95`
+- Background Light: `#f5f8f7`
+- Background Dark: `#10221c`
+
+## 📝 License
+
+Private - All rights reserved © 2024 Carbon Agent Inc.

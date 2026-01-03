@@ -1,0 +1,129 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Platform - Carbon Agent">
+	<Header />
+	<main class="flex-1">
+		<!-- Hero Section -->
+		<section class="relative isolate overflow-hidden">
+			<div class="absolute inset-0 -z-10 h-full w-full bg-black/50"></div>
+			<div class="absolute inset-0 -z-20 h-full w-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDiStInHPjg6Dt_4wjwL3L9fJCwD5Hp9Gf8PIoYTOocs_WpeiaPJ1z-aBfjjrjRPFOIfIMWOo7SigPC3zrwUR21YHLHmRT4R-F2_qgNt8632-Ej3iXHYptTYWwOr7Og_GpcXjIWiLftrVF9Hh2MvbcKParOZbonUdiDJSvTs4QDnGvdsOXwqxoRA99J03ebIzjVu9hzuYfnWwQuAJRsOi099Ks7Rlmu0FBH_15-iNstXTC2OvIXo-tYR8IjH6FzZwvRRwvMdy_gxz4');">
+			</div>
+			<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-32 pb-24 lg:pt-40 lg:pb-32 text-center">
+				<h1 class="mx-auto max-w-4xl text-4xl font-black tracking-tight text-white sm:text-6xl drop-shadow-sm">
+					Empower Your Business with Carbon Agent
+				</h1>
+				<p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-200">
+					A comprehensive solution for tracking, managing, and reporting your corporate carbon footprint.
+				</p>
+				<div class="mt-10 flex items-center justify-center gap-x-6">
+					<button class="h-12 rounded-lg bg-primary px-8 text-base font-bold text-[#0d1c17] shadow-lg transition-all hover:bg-primary/90 hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
+						Start Measuring Today
+					</button>
+					<a class="text-sm font-semibold leading-6 text-white hover:text-primary transition-colors" href="#">Learn more <span aria-hidden="true">→</span></a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Features Grid -->
+		<section class="py-24 bg-background-light dark:bg-background-dark">
+			<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+				<div class="mx-auto max-w-2xl text-center lg:max-w-4xl">
+					<h2 class="text-base font-semibold leading-7 text-primary">Key Capabilities</h2>
+					<p class="mt-2 text-3xl font-bold tracking-tight text-text-main dark:text-white sm:text-4xl">Why Choose Carbon Agent?</p>
+					<p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">
+						Discover the tools that make sustainability management simple, effective, and transparent for your entire organization.
+					</p>
+				</div>
+				<div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+					<div class="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-3 md:grid-cols-2">
+						<!-- Feature 1 -->
+						<div class="group relative flex flex-col gap-4 rounded-xl bg-card-light dark:bg-card-dark p-8 shadow-sm ring-1 ring-gray-200 dark:ring-gray-700 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+							<div class="mb-2 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
+								<span class="material-symbols-outlined text-primary text-3xl">language</span>
+							</div>
+							<h3 class="text-lg font-bold leading-tight text-text-main dark:text-white">Web-Based Access</h3>
+							<p class="text-sm leading-6 text-gray-600 dark:text-gray-400">
+								Access your dashboard from anywhere, anytime, without complex installations or local server requirements.
+							</p>
+						</div>
+						<!-- Feature 2 -->
+						<div class="group relative flex flex-col gap-4 rounded-xl bg-card-light dark:bg-card-dark p-8 shadow-sm ring-1 ring-gray-200 dark:ring-gray-700 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+							<div class="mb-2 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
+								<span class="material-symbols-outlined text-primary text-3xl">sentiment_satisfied</span>
+							</div>
+							<h3 class="text-lg font-bold leading-tight text-text-main dark:text-white">User-Friendly Interface</h3>
+							<p class="text-sm leading-6 text-gray-600 dark:text-gray-400">
+								Intuitive design requiring zero specialized training so your team can start managing data immediately.
+							</p>
+						</div>
+						<!-- Feature 3 -->
+						<div class="group relative flex flex-col gap-4 rounded-xl bg-card-light dark:bg-card-dark p-8 shadow-sm ring-1 ring-gray-200 dark:ring-gray-700 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+							<div class="mb-2 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
+								<span class="material-symbols-outlined text-primary text-3xl">verified_user</span>
+							</div>
+							<h3 class="text-lg font-bold leading-tight text-text-main dark:text-white">Secure Data Storage</h3>
+							<p class="text-sm leading-6 text-gray-600 dark:text-gray-400">
+								Enterprise-grade encryption and regular backups keep your sensitive sustainability data safe and compliant.
+							</p>
+						</div>
+						<!-- Feature 4 -->
+						<div class="group relative flex flex-col gap-4 rounded-xl bg-card-light dark:bg-card-dark p-8 shadow-sm ring-1 ring-gray-200 dark:ring-gray-700 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+							<div class="mb-2 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
+								<span class="material-symbols-outlined text-primary text-3xl">note_add</span>
+							</div>
+							<h3 class="text-lg font-bold leading-tight text-text-main dark:text-white">Easy Data Entry</h3>
+							<p class="text-sm leading-6 text-gray-600 dark:text-gray-400">
+								Streamlined manual forms and intelligent bulk upload options via CSV/Excel to save you valuable time.
+							</p>
+						</div>
+						<!-- Feature 5 -->
+						<div class="group relative flex flex-col gap-4 rounded-xl bg-card-light dark:bg-card-dark p-8 shadow-sm ring-1 ring-gray-200 dark:ring-gray-700 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+							<div class="mb-2 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
+								<span class="material-symbols-outlined text-primary text-3xl">assessment</span>
+							</div>
+							<h3 class="text-lg font-bold leading-tight text-text-main dark:text-white">Instant Reporting</h3>
+							<p class="text-sm leading-6 text-gray-600 dark:text-gray-400">
+								Generate ISO-compliant reports and visual summaries for stakeholders with a single click.
+							</p>
+						</div>
+						<!-- Feature 6 -->
+						<div class="group relative flex flex-col gap-4 rounded-xl bg-card-light dark:bg-card-dark p-8 shadow-sm ring-1 ring-gray-200 dark:ring-gray-700 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+							<div class="mb-2 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
+								<span class="material-symbols-outlined text-primary text-3xl">filter_alt</span>
+							</div>
+							<h3 class="text-lg font-bold leading-tight text-text-main dark:text-white">Smart Filtering</h3>
+							<p class="text-sm leading-6 text-gray-600 dark:text-gray-400">
+								Drill down into specific departments, dates, regions, or emission scopes effortlessly to find insights.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA Section -->
+		<section class="relative isolate overflow-hidden bg-[#10221c] py-24 sm:py-32">
+			<div aria-hidden="true" class="absolute left-[calc(50%-4rem)] top-10 -z-10 transform-gpu blur-3xl sm:left-[calc(50%-18rem)] lg:left-48 lg:top-[calc(50%-30rem)] xl:left-[calc(50%-24rem)]">
+				<div class="aspect-[1108/632] w-[69.25rem] bg-gradient-to-r from-[#0bda95] to-[#046e4b] opacity-20" style="clip-path: polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)"></div>
+			</div>
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="mx-auto max-w-2xl text-center">
+					<h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Ready to reduce your footprint?</h2>
+					<p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
+						Join hundreds of forward-thinking businesses managing their carbon impact efficiently with Carbon Agent.
+					</p>
+					<div class="mt-10 flex items-center justify-center gap-x-6">
+						<button class="flex h-12 min-w-[160px] cursor-pointer items-center justify-center rounded-lg bg-primary px-8 text-base font-bold text-[#0d1c17] transition-transform hover:scale-105">
+							Get Started Now
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer />
+</Layout>

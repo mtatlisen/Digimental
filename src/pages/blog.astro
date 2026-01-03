@@ -1,0 +1,121 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Blog - Carbon Agent">
+	<Header />
+	<main class="flex-1 w-full flex flex-col items-center">
+		<!-- Hero Section -->
+		<section class="w-full px-4 md:px-10 lg:px-40 py-10 flex justify-center">
+			<div class="w-full max-w-[1280px]">
+				<div class="@container">
+					<div class="flex flex-col gap-6 lg:gap-12 lg:flex-row items-center">
+						<div class="w-full lg:w-3/5 bg-center bg-no-repeat aspect-video bg-cover rounded-xl shadow-lg relative overflow-hidden group" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD51sy4HATR_PwUSsyvFIMuzxLdNNoRl6iRx4lGbNt_6W5JWN9LKBc4i2XszK8OsBPpuI4rPiVSvysMSZpRRvM5zJh9X6ki16SNnRucrLYBmlCAskxMqskkcptUSZrn0Lbeg3B9mWUzEKmsQcT5QJ11EpiJA5tnTE3Th_gGesk0K289p0uKkYqBcSWwMBOt0pG2upXTAeFShIu3DsStYrSiywbH6t5fNPncS8b2-XWhJYDZx-9wJSkhcI0w3E7ROiq2uMf9gtHjeEo");'>
+							<div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-all duration-500"></div>
+						</div>
+						<div class="flex flex-col gap-6 lg:w-2/5 justify-center">
+							<div class="flex flex-col gap-3 text-left">
+								<div class="flex items-center gap-2">
+									<span class="px-2.5 py-1 rounded-full bg-primary text-[#0d1c17] text-xs font-bold uppercase tracking-wider">Featured</span>
+									<span class="text-text-muted text-sm font-medium">5 min read</span>
+								</div>
+								<h1 class="text-text-main dark:text-white text-3xl md:text-4xl lg:text-5xl font-black leading-tight tracking-[-0.033em]">
+									Decarbonizing Supply Chains: A 2024 Guide
+								</h1>
+								<h2 class="text-text-main/80 dark:text-gray-300 text-base md:text-lg font-normal leading-relaxed">
+									Scope 3 emissions often account for more than 70% of a business's carbon footprint. Learn actionable strategies to engage suppliers and drive reduction.
+								</h2>
+							</div>
+							<button class="flex w-fit cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-[#0d1c17] text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary-dark hover:text-white transition-all shadow-md hover:shadow-lg">
+								<span class="truncate">Read Full Guide</span>
+								<span class="material-symbols-outlined ml-2 text-xl">arrow_forward</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Blog Grid -->
+		<section class="w-full px-4 md:px-10 lg:px-40 py-10 flex justify-center">
+			<div class="w-full max-w-[1280px]">
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+					<!-- Article Card 1 -->
+					<article class="flex flex-col bg-surface-light dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-border-light dark:border-border-dark group">
+						<div class="w-full h-56 bg-cover bg-center overflow-hidden" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCs9K3n3HF33R5oDUP4zYuFEYKnFucp0T0zjmYt-WHoo8VTkGNF2xpd7g5RkMRp-Dp-l8HKr-5bWE6mQFWmGMpZwy_KehvPPCfx6Ed5gQ7dQjz02dIo-GMgLW7i48RN1e2Zc5uewoAsSweyK79vKGuG-DsQV6bleXk1GWowPcvKgx5I6wMjhimUHTR_VOIYfmP9UesQRUtv46qbidYpW1N41YIO83_xYvgaDofMakyceNcTKPBKxebJAAIHFvlv020UBupf1ITKCmY");'>
+							<div class="w-full h-full bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+						</div>
+						<div class="p-6 flex flex-col flex-1">
+							<div class="flex items-center justify-between mb-3">
+								<span class="px-2 py-1 bg-primary/10 text-primary-dark dark:text-primary text-xs font-bold rounded uppercase tracking-wide">Guide</span>
+								<span class="text-text-muted text-xs">May 15 • 6 min read</span>
+							</div>
+							<h3 class="text-xl font-bold text-text-main dark:text-white mb-3 line-clamp-2 group-hover:text-primary transition-colors">Understanding Scope 3 Emissions</h3>
+							<p class="text-text-main/70 dark:text-gray-400 text-sm mb-6 line-clamp-3 flex-1">A deep dive into the most complex category of emissions and how to tackle them effectively using modern accounting frameworks.</p>
+							<a class="flex items-center gap-2 text-sm font-bold text-text-main dark:text-white hover:text-primary transition-colors mt-auto" href="#">
+								Read Article <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+							</a>
+						</div>
+					</article>
+
+					<!-- Article Card 2 -->
+					<article class="flex flex-col bg-surface-light dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-border-light dark:border-border-dark group">
+						<div class="w-full h-56 bg-cover bg-center overflow-hidden" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD8cNKQitEkoFdVVd_ZVtuZ1UQLt_frSy_BVCbZeFFBFhlTfVTUBfY8seLdz4YuLeU7fXkkNGLmv4plGgbgQLqe3kLJ2N2JhNB61hRmZEKlngdWuiDEuDJz3ECiOtA0LGCVP-uYXI9PTTTfN-7cT4hwrAWdFpC53Z-Lgybkb9odVdlolD-1u2h1Ly-sKyr6dq2ZyQTvjNGrYtu4qr-2jKwxotEWPUZhusCubRECf4Gaz-6NTemSeBdF83b5ZkDGhDm4srSOR2Y--Mc");'>
+							<div class="w-full h-full bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+						</div>
+						<div class="p-6 flex flex-col flex-1">
+							<div class="flex items-center justify-between mb-3">
+								<span class="px-2 py-1 bg-primary/10 text-primary-dark dark:text-primary text-xs font-bold rounded uppercase tracking-wide">News</span>
+								<span class="text-text-muted text-xs">May 12 • 4 min read</span>
+							</div>
+							<h3 class="text-xl font-bold text-text-main dark:text-white mb-3 line-clamp-2 group-hover:text-primary transition-colors">How New EU Regulations Affect US Manufacturers</h3>
+							<p class="text-text-main/70 dark:text-gray-400 text-sm mb-6 line-clamp-3 flex-1">An overview of the upcoming compliance deadlines and what they mean for your export business strategies in 2024.</p>
+							<a class="flex items-center gap-2 text-sm font-bold text-text-main dark:text-white hover:text-primary transition-colors mt-auto" href="#">
+								Read Article <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+							</a>
+						</div>
+					</article>
+
+					<!-- Article Card 3 -->
+					<article class="flex flex-col bg-surface-light dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-border-light dark:border-border-dark group">
+						<div class="w-full h-56 bg-cover bg-center overflow-hidden" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBriw5X3SxddPJw2bhdeMGFKmyebnmD6pN8MCnW0ix2fMld8gfK0TNY0zC57u3N_P3yeUqaUg1wIX3GyY_ONdRq1OmxJIb_inIM0v74V3hQc_GudaeyXBTnlZxJLhQjKS6w4Ms13QiOI5davg3u49quT8rqQO72pxScr1WMTkrssYEyYNgZTYxXBQKxWb5bA2uUh_cl6h5z2fT2G86TQi_PrxJhI65EZ9VxqsoUM03Joq3AA3BWQQqxoVy4-08R3I3yY-nGibg36sE");'>
+							<div class="w-full h-full bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+						</div>
+						<div class="p-6 flex flex-col flex-1">
+							<div class="flex items-center justify-between mb-3">
+								<span class="px-2 py-1 bg-primary/10 text-primary-dark dark:text-primary text-xs font-bold rounded uppercase tracking-wide">Tech</span>
+								<span class="text-text-muted text-xs">May 10 • 5 min read</span>
+							</div>
+							<h3 class="text-xl font-bold text-text-main dark:text-white mb-3 line-clamp-2 group-hover:text-primary transition-colors">Reducing Digital Carbon Footprints</h3>
+							<p class="text-text-main/70 dark:text-gray-400 text-sm mb-6 line-clamp-3 flex-1">Practical strategies to minimize the energy consumption of your cloud infrastructure, data centers, and employee devices.</p>
+							<a class="flex items-center gap-2 text-sm font-bold text-text-main dark:text-white hover:text-primary transition-colors mt-auto" href="#">
+								Read Article <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+							</a>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<!-- Newsletter Section -->
+		<section class="w-full bg-primary/10 dark:bg-primary/5 py-16 px-4">
+			<div class="max-w-[800px] mx-auto text-center flex flex-col items-center gap-6">
+				<div class="size-12 rounded-full bg-primary/20 flex items-center justify-center text-primary-dark dark:text-primary mb-2">
+					<span class="material-symbols-outlined text-3xl">mail</span>
+				</div>
+				<h2 class="text-3xl font-bold text-text-main dark:text-white">Subscribe to the Green Standard</h2>
+				<p class="text-text-main/70 dark:text-gray-300 max-w-[600px]">Join 5,000+ sustainability leaders. Get the latest insights, regulatory updates, and carbon management strategies delivered to your inbox.</p>
+				<form class="flex w-full max-w-[480px] gap-3 mt-4 flex-col sm:flex-row">
+					<input class="flex-1 rounded-lg border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark px-4 py-3 text-text-main dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent outline-none" placeholder="Enter your work email" required type="email" />
+					<button class="bg-primary hover:bg-primary-dark text-[#0d1c17] font-bold py-3 px-6 rounded-lg transition-colors whitespace-nowrap" type="submit">
+						Subscribe
+					</button>
+				</form>
+				<p class="text-xs text-text-muted mt-2">We care about your data in our privacy policy.</p>
+			</div>
+		</section>
+	</main>
+	<Footer />
+</Layout>
