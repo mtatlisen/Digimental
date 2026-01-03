@@ -1,0 +1,233 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Decarbonize Your Business" currentPage="/">
+  <!-- Hero Section -->
+  <section class="relative w-full py-12 md:py-24 bg-background-light dark:bg-background-dark">
+    <div class="max-w-7xl mx-auto px-4 md:px-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="flex flex-col gap-6 text-left">
+          <div class="inline-flex w-fit items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary dark:text-primary">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+            </span>
+            New: Scope 3 Explorer
+          </div>
+          <h1 class="text-4xl md:text-6xl font-black leading-tight tracking-tight text-text-main dark:text-white">
+            Decarbonize Your <br/><span class="text-primary">Business</span> with Precision
+          </h1>
+          <p class="text-lg text-gray-600 dark:text-gray-300 max-w-lg leading-relaxed">
+            Automated carbon accounting and reporting for the modern enterprise. Track Scope 1, 2, & 3 emissions in real-time and achieve Net Zero faster.
+          </p>
+          <div class="flex flex-wrap gap-4 pt-4">
+            <a href="/demo" class="flex items-center justify-center rounded-lg h-12 px-6 bg-primary hover:bg-primary-hover transition-colors text-text-main text-base font-bold">
+              Start Free Trial
+            </a>
+            <a href="/platform" class="flex items-center justify-center rounded-lg h-12 px-6 border-2 border-border-light dark:border-border-dark hover:border-primary/50 text-text-main dark:text-white text-base font-bold bg-transparent">
+              View Demo
+            </a>
+          </div>
+          <div class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mt-2">
+            <span class="material-symbols-outlined text-[18px]">check_circle</span>
+            <span>No credit card required</span>
+            <span class="mx-2">•</span>
+            <span class="material-symbols-outlined text-[18px]">check_circle</span>
+            <span>ISO 14064 Compliant</span>
+          </div>
+        </div>
+        <div class="relative w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark p-2">
+          <div class="w-full h-full rounded-xl bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA1U2LOobV27PXmnW6U6pwroPs568F_jVsIWypZLx3FMErGrEUvfSvFw17zedVfAAc2OCQKEjGGkAjkf0YRPGdtYeRJDFe2ecGoftZ309sBoZFV1l5QRKKT64G5ILjI0UgHxUoAaZ4dd8_3QYznVanQ3He1jzhO8DSShpBiCEpqh2KunuTfavhY7oY16HUrm57DiiXSxytVnCNaQGKipLJ4hVkGkVLGhAfFTjLiA2cwuiyvzRVCInjNpui9BxGQ_iiSRA7G_wVEFF8");'>
+            <div class="absolute inset-0 bg-gradient-to-t from-background-light/80 to-transparent dark:from-background-dark/80 flex items-end justify-center p-8">
+              <div class="bg-white/90 dark:bg-black/80 backdrop-blur-md rounded-lg p-4 w-full max-w-sm shadow-lg border border-primary/20">
+                <div class="flex justify-between items-center mb-2">
+                  <span class="text-xs font-bold uppercase text-gray-500">Total Emissions</span>
+                  <span class="text-primary text-xs font-bold">-12.5% YoY</span>
+                </div>
+                <div class="text-2xl font-bold text-text-main dark:text-white mb-2">1,240 <span class="text-sm font-normal text-gray-500">tCO2e</span></div>
+                <div class="w-full bg-gray-200 dark:bg-gray-700 h-2 rounded-full overflow-hidden">
+                  <div class="bg-primary h-full rounded-full" style="width: 65%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof -->
+  <section class="py-10 border-y border-border-light dark:border-border-dark bg-white dark:bg-surface-dark">
+    <div class="max-w-7xl mx-auto px-4 md:px-10 text-center">
+      <p class="text-sm font-medium text-gray-500 dark:text-gray-400 mb-8 uppercase tracking-wider">Trusted by sustainability leaders worldwide</p>
+      <div class="flex flex-wrap justify-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+        <div class="flex items-center gap-2 font-bold text-xl text-text-main dark:text-white">
+          <span class="material-symbols-outlined text-3xl">eco</span> Acme Corp
+        </div>
+        <div class="flex items-center gap-2 font-bold text-xl text-text-main dark:text-white">
+          <span class="material-symbols-outlined text-3xl">bolt</span> Global Ind
+        </div>
+        <div class="flex items-center gap-2 font-bold text-xl text-text-main dark:text-white">
+          <span class="material-symbols-outlined text-3xl">forest</span> EcoTech
+        </div>
+        <div class="flex items-center gap-2 font-bold text-xl text-text-main dark:text-white">
+          <span class="material-symbols-outlined text-3xl">water_drop</span> BlueFuture
+        </div>
+        <div class="flex items-center gap-2 font-bold text-xl text-text-main dark:text-white">
+          <span class="material-symbols-outlined text-3xl">solar_power</span> SunRise
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Grid -->
+  <section class="py-20 bg-background-light dark:bg-background-dark">
+    <div class="max-w-7xl mx-auto px-4 md:px-10">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-text-main dark:text-white mb-4">Comprehensive Carbon Management</h2>
+        <p class="text-gray-600 dark:text-gray-300 text-lg">Everything you need to measure, report, and reduce your corporate footprint in one centralized platform.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="group bg-white dark:bg-surface-dark p-8 rounded-xl border border-border-light dark:border-border-dark hover:border-primary/50 hover:shadow-lg transition-all duration-300">
+          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+            <span class="material-symbols-outlined text-[32px]">cloud_upload</span>
+          </div>
+          <h3 class="text-xl font-bold text-text-main dark:text-white mb-3">Automated Data Collection</h3>
+          <p class="text-gray-600 dark:text-gray-400">Seamlessly integrate with ERPs, utility providers, and travel platforms to automate data ingress and eliminate manual errors.</p>
+        </div>
+        <!-- Feature 2 -->
+        <div class="group bg-white dark:bg-surface-dark p-8 rounded-xl border border-border-light dark:border-border-dark hover:border-primary/50 hover:shadow-lg transition-all duration-300">
+          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+            <span class="material-symbols-outlined text-[32px]">fact_check</span>
+          </div>
+          <h3 class="text-xl font-bold text-text-main dark:text-white mb-3">Audit-Ready Reporting</h3>
+          <p class="text-gray-600 dark:text-gray-400">Generate ISO-compliant and GHG Protocol aligned reports ready for external audit, investors, and stakeholder review.</p>
+        </div>
+        <!-- Feature 3 -->
+        <div class="group bg-white dark:bg-surface-dark p-8 rounded-xl border border-border-light dark:border-border-dark hover:border-primary/50 hover:shadow-lg transition-all duration-300">
+          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+            <span class="material-symbols-outlined text-[32px]">hub</span>
+          </div>
+          <h3 class="text-xl font-bold text-text-main dark:text-white mb-3">Supply Chain Engagement</h3>
+          <p class="text-gray-600 dark:text-gray-400">Collaborate deeply with suppliers to accurately track and reduce Scope 3 emissions across your entire value chain.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Value Prop Section with Image -->
+  <section class="py-20 bg-white dark:bg-surface-dark border-t border-border-light dark:border-border-dark">
+    <div class="max-w-7xl mx-auto px-4 md:px-10">
+      <div class="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
+        <div class="flex-1 order-2 md:order-1">
+          <div class="relative rounded-2xl overflow-hidden shadow-xl aspect-video bg-gray-100" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBFLv9kR86UiAn4BuNgq1DMP-Oz6T0nizNA3B9zPfiLQ1Oco_0gUgi55wv7OsKICkBMjAMiV1gq6LHkmZBHVCPAEVAHrK1eM79hqPQLBo7zA-fwge44QOxl5womZYAMqdaJMCOhve2FvwX4COWD93NMb3ds47wz8Br1vRaoqknjM_sJJUp_B0AL7rYo3ld9zV0F0BFNTrstkMImZP8puxuXQMFmHC2rZdVvjwvVdOWv6ccARR-qFCHy45yXesaAM1IMq9DAzvxcIgo'); background-size: cover; background-position: center;">
+            <div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+          </div>
+        </div>
+        <div class="flex-1 order-1 md:order-2 flex flex-col gap-6">
+          <h2 class="text-3xl md:text-4xl font-bold text-text-main dark:text-white">Visualize Your Impact in Real-Time</h2>
+          <p class="text-lg text-gray-600 dark:text-gray-300">
+            Move beyond spreadsheets. Our interactive dashboard gives you a granular view of emission sources across all scopes. Track your journey to Net Zero with predictive analytics and scenario modeling.
+          </p>
+          <div class="flex flex-col gap-4 mt-2">
+            <div class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-primary mt-1">analytics</span>
+              <div>
+                <h4 class="font-bold text-text-main dark:text-white">Granular Precision</h4>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Drill down by facility, region, or business unit.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-primary mt-1">model_training</span>
+              <div>
+                <h4 class="font-bold text-text-main dark:text-white">AI-Driven Forecasting</h4>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Predict future emissions based on growth projections.</p>
+              </div>
+            </div>
+          </div>
+          <a href="/platform" class="w-fit mt-4 flex items-center gap-2 text-primary font-bold hover:text-primary-dark transition-colors group">
+            Explore Dashboard Features <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact/ROI Calculator Teaser -->
+  <section class="py-20 bg-background-light dark:bg-background-dark">
+    <div class="max-w-4xl mx-auto px-4 md:px-10">
+      <div class="bg-primary/5 dark:bg-surface-dark border border-primary/20 rounded-2xl p-8 md:p-12 text-center">
+        <span class="material-symbols-outlined text-primary text-5xl mb-4">savings</span>
+        <h2 class="text-3xl font-bold text-text-main dark:text-white mb-4">Calculate Your Reduction Potential</h2>
+        <p class="text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">See how much time and carbon you could save by automating your footprint management with Carbon Agent.</p>
+        <div class="bg-white dark:bg-background-dark rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 max-w-lg mx-auto mb-8">
+          <div class="flex justify-between items-center mb-2">
+            <span class="text-sm font-medium text-gray-500">Current Reporting Time (Hours/Year)</span>
+            <span class="font-bold text-text-main dark:text-white">500h</span>
+          </div>
+          <input type="range" min="0" max="1000" value="500" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-primary" />
+          <div class="mt-6 pt-6 border-t border-dashed border-gray-200 dark:border-gray-700 flex justify-between items-end">
+            <div class="text-left">
+              <div class="text-xs text-gray-500 uppercase font-bold">Projected Savings</div>
+              <div class="text-3xl font-black text-primary">~400 Hours</div>
+            </div>
+            <div class="text-right text-xs text-gray-400">
+              Based on average customer data
+            </div>
+          </div>
+        </div>
+        <a href="/demo" class="inline-flex mx-auto items-center justify-center rounded-lg h-12 px-8 bg-primary hover:bg-primary-hover transition-colors text-text-main text-base font-bold shadow-md">
+          Get Your Personalized Report
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial Section -->
+  <section class="py-20 bg-white dark:bg-surface-dark">
+    <div class="max-w-7xl mx-auto px-4 md:px-10">
+      <div class="flex flex-col items-center text-center max-w-4xl mx-auto">
+        <span class="material-symbols-outlined text-4xl text-primary/40 mb-6">format_quote</span>
+        <h3 class="text-2xl md:text-4xl font-medium leading-tight text-text-main dark:text-white mb-8">
+          "Carbon Agent transformed our sustainability strategy. We reduced our reporting time by 80% and identified critical emission hotspots we hadn't seen before."
+        </h3>
+        <div class="flex items-center gap-4">
+          <div class="h-12 w-12 rounded-full bg-gray-200 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA65zvp7tRVKazEMVv8Sb5vqfyk2a7YJL3Aqa-LNrRt0fzQi3LCKEvqcKPKkbRFR7kBApFcYnCVYUD9rJmj3ClKTpJCQEkUhfA4llC1ouWexFJcRwb4fPgsMh51SE6UJEh35Yp4-0SRJ7jMXmu7HGskE3v1iXWe9TO8P6ijfvAYRc95_ao1hNEiyrTUWgVCuJc5XP8Guqvu4-MLYBXj5S7sgjiozJjw8806MqXUUt2itTNYSiEOmZ9YSgj9EvbgjppkC8y3LeQ79hw');"></div>
+          <div class="text-left">
+            <div class="font-bold text-text-main dark:text-white">Sarah Jenkins</div>
+            <div class="text-sm text-primary font-medium">VP of Sustainability, TechCorp</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-background-light dark:bg-background-dark">
+    <div class="max-w-7xl mx-auto px-4 md:px-10">
+      <div class="bg-background-dark dark:bg-black rounded-2xl p-8 md:p-16 flex flex-col md:flex-row items-center justify-between gap-10 overflow-hidden relative">
+        <div class="absolute top-0 right-0 -mt-10 -mr-10 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -mb-10 -ml-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+        <div class="relative z-10 max-w-xl">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to reach Net Zero?</h2>
+          <p class="text-gray-300 text-lg mb-8">Join hundreds of forward-thinking companies measuring, reducing, and reporting with Carbon Agent.</p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/demo" class="flex items-center justify-center rounded-lg h-12 px-6 bg-primary hover:bg-primary-hover transition-colors text-text-main text-base font-bold">
+              Get Started Today
+            </a>
+            <a href="/contact" class="flex items-center justify-center rounded-lg h-12 px-6 border border-white/20 hover:bg-white/10 transition-colors text-white text-base font-bold">
+              Contact Sales
+            </a>
+          </div>
+        </div>
+        <div class="relative z-10 hidden md:block">
+          <div class="w-32 h-32 bg-primary rounded-full flex items-center justify-center animate-pulse">
+            <span class="material-symbols-outlined text-white text-6xl">arrow_outward</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

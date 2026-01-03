@@ -1,0 +1,165 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Contact Us" description="Get in touch with the Carbon Agent team" currentPage="/contact">
+  <div class="w-full max-w-[1280px] px-4 md:px-10 lg:px-20 py-10 mx-auto">
+    <!-- Page Heading -->
+    <div class="flex flex-col gap-4 mb-12 max-w-[800px]">
+      <h1 class="text-text-main dark:text-white text-4xl lg:text-5xl font-black leading-tight tracking-[-0.033em]">
+        Get in touch with our team
+      </h1>
+      <p class="text-gray-600 dark:text-gray-400 text-lg lg:text-xl font-normal leading-relaxed">
+        Let's reduce your footprint together. Whether you need a demo, support with your reporting, or just have a question, we are here to help.
+      </p>
+    </div>
+
+    <!-- Main Grid Layout -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
+      <!-- Left Column: Contact Info -->
+      <div class="lg:col-span-5 flex flex-col gap-8">
+        <div class="border-b border-border-light dark:border-border-dark pb-2">
+          <h2 class="text-text-main dark:text-white tracking-tight text-[28px] font-bold leading-tight">
+            Contact Information
+          </h2>
+        </div>
+        <div class="flex flex-col gap-2">
+          <!-- Sales -->
+          <div class="flex items-start gap-4 p-4 rounded-xl bg-white dark:bg-surface-dark shadow-sm border border-gray-100 dark:border-gray-700 hover:border-primary/50 transition-colors group">
+            <div class="text-text-main dark:text-primary flex items-center justify-center rounded-lg bg-primary/20 shrink-0 size-12 group-hover:bg-primary group-hover:text-text-main transition-colors">
+              <span class="material-symbols-outlined">mail</span>
+            </div>
+            <div class="flex flex-col justify-center py-1">
+              <p class="text-text-main dark:text-white text-base font-bold leading-normal">sales@carbonagent.com</p>
+              <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">For sales inquiries and demos</p>
+            </div>
+          </div>
+          <!-- Support -->
+          <div class="flex items-start gap-4 p-4 rounded-xl bg-white dark:bg-surface-dark shadow-sm border border-gray-100 dark:border-gray-700 hover:border-primary/50 transition-colors group">
+            <div class="text-text-main dark:text-primary flex items-center justify-center rounded-lg bg-primary/20 shrink-0 size-12 group-hover:bg-primary group-hover:text-text-main transition-colors">
+              <span class="material-symbols-outlined">help</span>
+            </div>
+            <div class="flex flex-col justify-center py-1">
+              <p class="text-text-main dark:text-white text-base font-bold leading-normal">help@carbonagent.com</p>
+              <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">For technical support</p>
+            </div>
+          </div>
+          <!-- Location -->
+          <div class="flex items-start gap-4 p-4 rounded-xl bg-white dark:bg-surface-dark shadow-sm border border-gray-100 dark:border-gray-700 hover:border-primary/50 transition-colors group">
+            <div class="text-text-main dark:text-primary flex items-center justify-center rounded-lg bg-primary/20 shrink-0 size-12 group-hover:bg-primary group-hover:text-text-main transition-colors">
+              <span class="material-symbols-outlined">location_on</span>
+            </div>
+            <div class="flex flex-col justify-center py-1">
+              <p class="text-text-main dark:text-white text-base font-bold leading-normal">Headquarters</p>
+              <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">123 Green Tech Blvd<br/>San Francisco, CA 94107</p>
+            </div>
+          </div>
+        </div>
+        <!-- Map -->
+        <div class="relative w-full h-48 rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800">
+          <img alt="Map showing San Francisco location" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8ICadkqTthiw-FXssm9CH527mO_Tpg9yt-vwcvSJJ1LnXc77V9acItuGvxg7cOMr2iTWLC-leYmhivrDPJ7C54v_5YPu9nUrZw9hFSvBpaLNSe9AvFRz52Zo-RA0JE0hDnfXS5oZSyMmOPMaYseMyWZBuk6M43xE3S6I--yCWjTEpfXBmwpPN3dnT51Gwqaa3HCZJAqirtH-ZfNFDJEZVE6RznuCBNHay_XMxsgrYaR-QLCsq9uqvKnTB3GOpfsQZOjYSLo7AWrg" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end p-4">
+            <p class="text-white text-xs font-medium bg-black/50 px-2 py-1 rounded backdrop-blur-sm">San Francisco, CA</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Contact Form -->
+      <div class="lg:col-span-7">
+        <div class="bg-white dark:bg-surface-dark rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 p-6 lg:p-8">
+          <h3 class="text-2xl font-bold text-text-main dark:text-white mb-6">Send us a message</h3>
+          <form action="#" class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- Name -->
+              <div>
+                <label class="block text-sm font-semibold leading-6 text-text-main dark:text-gray-200" for="name">Full Name</label>
+                <div class="mt-2">
+                  <input class="block w-full rounded-lg border-0 bg-gray-50 dark:bg-background-dark py-2.5 px-3 text-text-main dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 transition-shadow" id="name" name="name" placeholder="Jane Doe" type="text" />
+                </div>
+              </div>
+              <!-- Email -->
+              <div>
+                <label class="block text-sm font-semibold leading-6 text-text-main dark:text-gray-200" for="email">Work Email</label>
+                <div class="mt-2">
+                  <input class="block w-full rounded-lg border-0 bg-gray-50 dark:bg-background-dark py-2.5 px-3 text-text-main dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 transition-shadow" id="email" name="email" placeholder="jane@company.com" type="email" />
+                </div>
+              </div>
+              <!-- Company -->
+              <div class="md:col-span-2">
+                <label class="block text-sm font-semibold leading-6 text-text-main dark:text-gray-200" for="company">Company Name</label>
+                <div class="mt-2">
+                  <input class="block w-full rounded-lg border-0 bg-gray-50 dark:bg-background-dark py-2.5 px-3 text-text-main dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 transition-shadow" id="company" name="company" placeholder="Acme Corp" type="text" />
+                </div>
+              </div>
+              <!-- Subject -->
+              <div class="md:col-span-2">
+                <label class="block text-sm font-semibold leading-6 text-text-main dark:text-gray-200" for="subject">Topic</label>
+                <div class="mt-2">
+                  <select class="block w-full rounded-lg border-0 bg-gray-50 dark:bg-background-dark py-2.5 px-3 text-text-main dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-700 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 transition-shadow" id="subject" name="subject">
+                    <option>Request a Demo</option>
+                    <option>Sales Inquiry</option>
+                    <option>Technical Support</option>
+                    <option>Partnership</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+              </div>
+              <!-- Message -->
+              <div class="md:col-span-2">
+                <label class="block text-sm font-semibold leading-6 text-text-main dark:text-gray-200" for="message">Message</label>
+                <div class="mt-2">
+                  <textarea class="block w-full rounded-lg border-0 bg-gray-50 dark:bg-background-dark py-2.5 px-3 text-text-main dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 transition-shadow resize-none" id="message" name="message" placeholder="How can we help you reduce your carbon footprint?" rows="4"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="pt-2">
+              <button class="flex w-full justify-center rounded-lg bg-primary px-3 py-3 text-sm font-bold leading-6 text-text-main shadow-sm hover:bg-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-all transform active:scale-[0.98]" type="submit">
+                Send Message
+              </button>
+            </div>
+            <p class="text-xs text-center text-gray-500 dark:text-gray-400 mt-4">
+              By submitting this form, you agree to our <a class="underline hover:text-primary" href="#">Privacy Policy</a>. We typically respond within 24 hours.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="mt-24 w-full max-w-3xl mx-auto">
+      <h2 class="text-2xl font-bold text-center text-text-main dark:text-white mb-8">Common Questions</h2>
+      <div class="space-y-4">
+        <!-- FAQ Item 1 -->
+        <details class="group bg-white dark:bg-surface-dark rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-4 text-text-main dark:text-white font-medium hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors">
+            <h3 class="text-base">Do you offer a free trial for enterprises?</h3>
+            <span class="material-symbols-outlined transition duration-300 group-open:-rotate-180 text-gray-400">expand_more</span>
+          </summary>
+          <div class="px-4 pb-4 pt-0 text-gray-600 dark:text-gray-300 leading-relaxed text-sm">
+            Yes, we offer a 14-day comprehensive trial for enterprise accounts, allowing you to connect your data sources and see a preliminary footprint report. Contact sales to set this up.
+          </div>
+        </details>
+        <!-- FAQ Item 2 -->
+        <details class="group bg-white dark:bg-surface-dark rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-4 text-text-main dark:text-white font-medium hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors">
+            <h3 class="text-base">How does Carbon Agent calculate emissions?</h3>
+            <span class="material-symbols-outlined transition duration-300 group-open:-rotate-180 text-gray-400">expand_more</span>
+          </summary>
+          <div class="px-4 pb-4 pt-0 text-gray-600 dark:text-gray-300 leading-relaxed text-sm">
+            We utilize the GHG Protocol standards for Scope 1, 2, and 3 emissions. Our platform integrates with your utility, travel, and procurement data to provide real-time calculations.
+          </div>
+        </details>
+        <!-- FAQ Item 3 -->
+        <details class="group bg-white dark:bg-surface-dark rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-4 text-text-main dark:text-white font-medium hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors">
+            <h3 class="text-base">What integrations are supported?</h3>
+            <span class="material-symbols-outlined transition duration-300 group-open:-rotate-180 text-gray-400">expand_more</span>
+          </summary>
+          <div class="px-4 pb-4 pt-0 text-gray-600 dark:text-gray-300 leading-relaxed text-sm">
+            We currently support over 50 integrations including AWS, Azure, Google Cloud, Xero, QuickBooks, SAP, and major travel booking platforms.
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
