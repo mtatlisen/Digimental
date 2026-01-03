@@ -1,0 +1,252 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="About Us" description="Learn about Carbon Agent's mission to empower businesses with carbon management solutions" currentPage="/about">
+  <!-- Hero Section -->
+  <div class="relative w-full flex flex-col items-center justify-center pt-12 pb-16 px-4 md:px-10">
+    <div class="max-w-[1280px] w-full flex flex-col md:flex-row gap-12 items-center">
+      <!-- Text Content -->
+      <div class="flex flex-col gap-6 md:w-1/2 md:pr-8">
+        <div class="flex flex-col gap-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 w-fit">
+            <span class="material-symbols-outlined text-primary text-sm">verified</span>
+            <span class="text-primary text-xs font-bold uppercase tracking-wider">ISO 14064-1:2018 Compliant</span>
+          </div>
+          <h1 class="text-text-main dark:text-white text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] tracking-[-0.033em]">
+            Carbon Accounting, <br class="hidden lg:block"/>Simplified for Enterprise
+          </h1>
+          <p class="text-text-main/80 dark:text-white/80 text-lg font-normal leading-relaxed max-w-[600px]">
+            Meet Carbon Agent: The science-backed platform for precise corporate footprint management and reporting. We turn complex climate data into audit-ready insights.
+          </p>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-3 pt-2">
+          <a href="/demo" class="flex items-center justify-center rounded-lg h-12 px-6 bg-primary hover:bg-primary-hover transition-all text-text-main text-base font-bold tracking-[0.015em] shadow-lg shadow-primary/20">
+            Request Demo
+          </a>
+          <a href="#methodology" class="flex items-center justify-center rounded-lg h-12 px-6 bg-white dark:bg-white/10 border border-border-light dark:border-white/10 hover:bg-gray-50 dark:hover:bg-white/20 transition-all text-text-main dark:text-white text-base font-bold tracking-[0.015em]">
+            Explore Methodology
+          </a>
+        </div>
+      </div>
+      <!-- Hero Image -->
+      <div class="md:w-1/2 w-full h-full relative">
+        <div class="aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-2xl relative bg-gray-100 dark:bg-gray-800">
+          <div class="absolute inset-0 bg-gradient-to-tr from-background-light to-transparent opacity-20 z-10"></div>
+          <div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC8geaMLLu9nnG9kVn-5dpNT_hVxvJGZsPE8OO7228-6aa2r26u9HuACyN1ju1jUXQxfcLxVPICCe7a3Ps4h75_Anw2krI1f-hu7f1G2tfrCS-Qv0Rp3D3o2GoE3w3p7r-xsLo6rDQUWSZe-x2iEe7JMgHMRV5ImwzChavSmBxImbBcmmPjKF-3XnyvamHbYdDV-fVJJ6mKqAXs-5h5Q4DyVzd8WFqbimRkUkD-YIujZ-Kvi7mwQhTJ2XOEfaVhLBGkkpET7OkNzUY');"></div>
+          <!-- Floating UI Card Decoration -->
+          <div class="absolute bottom-6 left-6 bg-white dark:bg-surface-dark p-4 rounded-xl shadow-lg max-w-[240px] z-20 border border-gray-100 dark:border-white/5 animate-pulse">
+            <div class="flex items-center gap-3 mb-2">
+              <div class="size-8 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+                <span class="material-symbols-outlined text-sm">trending_down</span>
+              </div>
+              <div>
+                <p class="text-xs text-gray-500 dark:text-gray-400 font-medium">Net Emissions</p>
+                <p class="text-sm font-bold text-text-main dark:text-white">-24% YoY</p>
+              </div>
+            </div>
+            <div class="h-1.5 w-full bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
+              <div class="h-full bg-primary w-[76%] rounded-full"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Compliance Banner -->
+  <div class="w-full bg-white dark:bg-white/5 border-y border-border-light dark:border-white/10 py-8">
+    <div class="max-w-[1280px] mx-auto px-4 md:px-10">
+      <p class="text-center text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-widest mb-6">Built on Global Standards</p>
+      <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+        <div class="flex items-center gap-2 group">
+          <span class="material-symbols-outlined text-3xl">verified_user</span>
+          <span class="font-bold text-lg text-text-main dark:text-white">ISO 14064-1</span>
+        </div>
+        <div class="flex items-center gap-2 group">
+          <span class="material-symbols-outlined text-3xl">public</span>
+          <span class="font-bold text-lg text-text-main dark:text-white">GHG Protocol</span>
+        </div>
+        <div class="flex items-center gap-2 group">
+          <span class="material-symbols-outlined text-3xl">lock</span>
+          <span class="font-bold text-lg text-text-main dark:text-white">SOC 2 Type II</span>
+        </div>
+        <div class="flex items-center gap-2 group">
+          <span class="material-symbols-outlined text-3xl">science</span>
+          <span class="font-bold text-lg text-text-main dark:text-white">SBTi Aligned</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mission Section -->
+  <div class="py-20 px-4 md:px-10 bg-background-light dark:bg-background-dark">
+    <div class="max-w-[960px] mx-auto text-center flex flex-col gap-6">
+      <h2 class="text-primary text-sm font-bold tracking-widest uppercase">Our Mission</h2>
+      <h3 class="text-text-main dark:text-white text-3xl md:text-4xl font-bold leading-tight">
+        Empowering a Net-Zero Future through Radical Transparency
+      </h3>
+      <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+        We believe that you can't manage what you can't measure. Carbon Agent was founded by a team of environmental scientists and data engineers with a singular goal: to make high-fidelity carbon accounting accessible, automated, and actionable for enterprises worldwide.
+      </p>
+    </div>
+  </div>
+
+  <!-- Features / Value Prop -->
+  <div id="methodology" class="py-16 px-4 md:px-10 bg-white dark:bg-surface-dark">
+    <div class="max-w-[1280px] mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="group p-8 rounded-2xl bg-background-light dark:bg-white/5 border border-border-light dark:border-white/10 hover:border-primary/50 transition-colors">
+          <div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-text-main transition-colors">
+            <span class="material-symbols-outlined text-2xl">calculate</span>
+          </div>
+          <h4 class="text-xl font-bold text-text-main dark:text-white mb-3">Scientific Precision</h4>
+          <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+            Our calculation engine covers Scope 1, 2, and 3 emissions, utilizing over 50,000 emission factors updated monthly to ensure your data is always accurate.
+          </p>
+        </div>
+        <!-- Card 2 -->
+        <div class="group p-8 rounded-2xl bg-background-light dark:bg-white/5 border border-border-light dark:border-white/10 hover:border-primary/50 transition-colors">
+          <div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-text-main transition-colors">
+            <span class="material-symbols-outlined text-2xl">rule</span>
+          </div>
+          <h4 class="text-xl font-bold text-text-main dark:text-white mb-3">Audit-Ready Reporting</h4>
+          <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+            Generate ISO-compliant reports in one click. Our trail of evidence logs every data point modification, simplifying third-party verification and assurance.
+          </p>
+        </div>
+        <!-- Card 3 -->
+        <div class="group p-8 rounded-2xl bg-background-light dark:bg-white/5 border border-border-light dark:border-white/10 hover:border-primary/50 transition-colors">
+          <div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-text-main transition-colors">
+            <span class="material-symbols-outlined text-2xl">hub</span>
+          </div>
+          <h4 class="text-xl font-bold text-text-main dark:text-white mb-3">Automated Integrations</h4>
+          <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+            Connect directly to your ERP, utility providers, and travel management systems. Eliminate manual spreadsheets and reduce human error by 90%.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Process Section -->
+  <div class="py-20 px-4 md:px-10 bg-background-light dark:bg-background-dark overflow-hidden">
+    <div class="max-w-[1280px] mx-auto">
+      <div class="flex flex-col md:flex-row gap-12 items-center">
+        <div class="md:w-1/2">
+          <h2 class="text-3xl font-bold text-text-main dark:text-white mb-6">From Raw Data to Decarbonization</h2>
+          <div class="flex flex-col gap-8 relative">
+            <!-- Connecting Line -->
+            <div class="absolute left-6 top-8 bottom-8 w-0.5 bg-gray-200 dark:bg-white/10"></div>
+            <!-- Step 1 -->
+            <div class="relative flex gap-6 items-start">
+              <div class="z-10 size-12 rounded-full bg-white dark:bg-background-dark border-2 border-primary flex items-center justify-center shrink-0">
+                <span class="font-bold text-primary">01</span>
+              </div>
+              <div>
+                <h4 class="text-lg font-bold text-text-main dark:text-white mb-2">Data Ingestion</h4>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">Upload invoices, connect APIs, or drag-and-drop CSVs. Our system automatically categorizes activity data.</p>
+              </div>
+            </div>
+            <!-- Step 2 -->
+            <div class="relative flex gap-6 items-start">
+              <div class="z-10 size-12 rounded-full bg-white dark:bg-background-dark border-2 border-primary flex items-center justify-center shrink-0">
+                <span class="font-bold text-primary">02</span>
+              </div>
+              <div>
+                <h4 class="text-lg font-bold text-text-main dark:text-white mb-2">Engine Processing</h4>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">Our engine matches activity data to the most accurate emission factors (DEFRA, EPA, IPCC) specific to your region.</p>
+              </div>
+            </div>
+            <!-- Step 3 -->
+            <div class="relative flex gap-6 items-start">
+              <div class="z-10 size-12 rounded-full bg-white dark:bg-background-dark border-2 border-primary flex items-center justify-center shrink-0">
+                <span class="font-bold text-primary">03</span>
+              </div>
+              <div>
+                <h4 class="text-lg font-bold text-text-main dark:text-white mb-2">Insight & Report</h4>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">Visualize hotspots in your supply chain and export disclosure-ready reports for stakeholders.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="md:w-1/2 w-full">
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl aspect-square md:aspect-[4/3] group">
+            <div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBioGRfEbXeU-hQzx3dzb-z7Sc9SYWvQwHRVg0CsSShJ4lp8HoHeQ5gfVs_WWq49UA2VlRd8TpThBwDom9nNA34um54nWPDRiimVDdNxJRTP8fFbt1rVylvX51qkoP4ao0XQ89pfuXOJ-J-DxDTvTrGUqvKfjhs1K-Km0gtYlLF3xmLhhggEkWYQ8OIGk3zayqEFVchBX7zy0pMzrQUgyEfowdNT77iQdZ9f0FL_WkgsBRhyfNq9sZmTYf6riyWaElpCsUfThoyooM');"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div class="absolute bottom-6 left-6 right-6">
+              <div class="bg-white/95 dark:bg-surface-dark/95 backdrop-blur p-4 rounded-xl border-l-4 border-primary">
+                <p class="text-sm font-medium italic text-gray-800 dark:text-gray-200">"Carbon Agent reduced our reporting time from 3 months to 2 weeks, while increasing our data confidence score."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Team / Expertise Section -->
+  <div class="py-20 px-4 md:px-10 bg-white dark:bg-surface-dark">
+    <div class="max-w-[1280px] mx-auto">
+      <div class="text-center mb-12">
+        <h4 class="text-primary text-sm font-bold leading-normal tracking-[0.015em] mb-3">Built by Experts</h4>
+        <h2 class="text-text-main dark:text-white text-3xl font-bold">Bridging Science and Software</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Team Member 1 -->
+        <div class="flex flex-col gap-3">
+          <div class="w-full aspect-[3/4] rounded-lg bg-gray-200 dark:bg-gray-800 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBt4yOs2_o1E3EGuqB0cvu7WFpnJGGseGEvLoR7Vvrr8i8gj6CzGWE4blFB3LF3qH-RtDaqi8cCTHr1Rj2PWAkRfX9ZJGMfntgLxWcY7z5YBwLCve3_7UxyRnKvbj86oNDDfq3ELPD0oXT5TvwLL8U8iMMF0_aIYHzaF0lUKcYpuelnvwkpWBHiUFc7YrjKAtZ0JiZsKul6xam0GW-hrHdSJ8WuMDFVlSimiD2q_G66qpfiSj9N9RKk7Lw0lBSyfp7VJBctIsdZDvc');"></div>
+          <div>
+            <h5 class="text-lg font-bold text-text-main dark:text-white">Dr. Elena Rostova</h5>
+            <p class="text-primary font-medium text-sm">Head of Climate Science</p>
+          </div>
+        </div>
+        <!-- Team Member 2 -->
+        <div class="flex flex-col gap-3">
+          <div class="w-full aspect-[3/4] rounded-lg bg-gray-200 dark:bg-gray-800 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDbBxEsBgL6zHOomHgZawCBifrps4Igborgymtfdw9dJVPv4i-Be77UeSi6KokuOwUCwMM6beq3HC09wGKu0bgCcwZEU5I3Z8ufZ1GB_LRLyl0H5fIGVPxRaX7rHcdQ1xJ-Nb6OrS7eKPeeS7UqNhkO5iOYXvIOp-qiCJcOKWSAW597-4Po1QKInMBGNDp4vBDlSEeu8wZDOQ04WYsVkzpRCls5COKbbkYAMnKbOw4xIO5v7oMX0HUHEV-U0wsgONadcUKTcyWmP1c');"></div>
+          <div>
+            <h5 class="text-lg font-bold text-text-main dark:text-white">James Chen</h5>
+            <p class="text-primary font-medium text-sm">CTO & Co-Founder</p>
+          </div>
+        </div>
+        <!-- Team Member 3 -->
+        <div class="flex flex-col gap-3">
+          <div class="w-full aspect-[3/4] rounded-lg bg-gray-200 dark:bg-gray-800 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBLK3-75wnBk_AiyyV9w1DlSSOUbLN4zi1RTPsCq-eotleRF__1OPKvX6w-JznzDgqXDChgdVnn0N12OSKorXV73IV3CB7Dogg-QHJZYzKtilxKhP44SlTwFRWF7Zx1DUwZnFS_CAuYyRD9wJ82OEbdP-tR827XNeDYGB_HmdTrTH20QHL5NCoKCkWsBOkVvaV1bNmf2p3KkPzF0W0Mf1BeBuV8TMKJBNhaESbAuD2N9e8lwfCdEHc0QVuDRjxaOWx3TJy37EjYvcc');"></div>
+          <div>
+            <h5 class="text-lg font-bold text-text-main dark:text-white">Sarah Oconnell</h5>
+            <p class="text-primary font-medium text-sm">Director of Sustainability</p>
+          </div>
+        </div>
+        <!-- Team Member 4 -->
+        <div class="flex flex-col gap-3">
+          <div class="w-full aspect-[3/4] rounded-lg bg-gray-200 dark:bg-gray-800 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuChm3lQZGxE0HcZFKiTIeZfroHODrYsMlq9lfKYM1oxQ9GfYRq99QKqKIpYyDAcqoEVXBrcE9AaC7ZTr29L_LyVkDLYdEePc7iJRfVFHsnh2SdlMVIOcEFRACdV7pR9ep7aaj9nDiVmpmD66unIAL5yQwPQzYIFGgFGgTSgvivYCu5YZvGxmzfvjNa6fOtdAwVyyNUl4WJTRdMTqDNrxsHfR-u9SB6uxfuL-kmIaktxQIiW6CBzSFqCbKfu7jQI6LLfSqiVSKTdRiQ');"></div>
+          <div>
+            <h5 class="text-lg font-bold text-text-main dark:text-white">Marcus Thorne</h5>
+            <p class="text-primary font-medium text-sm">VP of Engineering</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA Section -->
+  <div class="py-24 px-4 md:px-10 bg-background-light dark:bg-background-dark border-t border-border-light dark:border-white/10">
+    <div class="max-w-[1280px] mx-auto bg-gradient-to-br from-primary to-primary-dark rounded-3xl p-10 md:p-20 text-center relative overflow-hidden">
+      <div class="absolute top-0 left-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+      <div class="absolute bottom-0 right-0 w-64 h-64 bg-black/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+      <div class="relative z-10 flex flex-col items-center max-w-2xl mx-auto">
+        <h2 class="text-text-main text-3xl md:text-5xl font-black mb-6 tracking-tight">Ready to master your carbon footprint?</h2>
+        <p class="text-text-main/80 text-lg mb-8 font-medium">Join over 500 enterprises using Carbon Agent to measure, report, and reduce their emissions.</p>
+        <div class="flex flex-col sm:flex-row gap-4 w-full justify-center">
+          <a href="/demo" class="flex min-w-[160px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-text-main text-white text-base font-bold leading-normal tracking-[0.015em] hover:scale-105 transition-transform">
+            Get a Demo
+          </a>
+          <a href="/contact" class="flex min-w-[160px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-white text-text-main text-base font-bold leading-normal tracking-[0.015em] hover:bg-gray-50 transition-colors">
+            Contact Sales
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

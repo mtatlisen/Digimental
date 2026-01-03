@@ -1,0 +1,179 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Additional Services" description="Expand your carbon management capabilities with specialized industry tools and expert consulting" currentPage="/services">
+  <div class="mx-auto max-w-7xl px-6 py-8 md:px-10 lg:px-12">
+    <!-- Page Heading -->
+    <header class="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+      <div class="flex flex-col gap-2">
+        <h1 class="text-3xl font-bold tracking-tight text-text-main dark:text-white md:text-4xl">Additional Services & Modules</h1>
+        <p class="text-base text-gray-600 dark:text-gray-400 max-w-2xl">Expand your carbon management capabilities with specialized industry tools and expert consulting.</p>
+      </div>
+    </header>
+
+    <!-- Search and Filters -->
+    <div class="mb-10 flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+      <!-- Search Bar -->
+      <div class="relative w-full max-w-md">
+        <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+          <span class="material-symbols-outlined text-gray-400">search</span>
+        </div>
+        <input type="text" placeholder="Search for modules, industries, or services..." class="block w-full rounded-xl border-none bg-surface-light dark:bg-surface-dark py-3 pl-10 pr-4 text-sm text-text-main placeholder-gray-400 shadow-sm focus:ring-2 focus:ring-primary dark:text-white dark:placeholder-gray-500" />
+      </div>
+      <!-- Filter Chips -->
+      <div class="flex flex-wrap gap-2">
+        <button class="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-text-main shadow-sm transition-transform hover:scale-105">All Services</button>
+        <button class="rounded-lg bg-surface-light dark:bg-surface-dark px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 shadow-sm hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">Industry Modules</button>
+        <button class="rounded-lg bg-surface-light dark:bg-surface-dark px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 shadow-sm hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">Consulting</button>
+        <button class="rounded-lg bg-surface-light dark:bg-surface-dark px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 shadow-sm hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">Compliance</button>
+      </div>
+    </div>
+
+    <!-- Featured Card -->
+    <section class="mb-12">
+      <div class="group relative overflow-hidden rounded-2xl bg-surface-light dark:bg-surface-dark shadow-md transition-all hover:shadow-lg">
+        <div class="flex flex-col md:flex-row">
+          <div class="h-64 w-full md:h-auto md:w-2/5 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA_wrtZOhbzo-um-3ZMu9wvw78JFFzVT-bhNypCjJb6JTs72469wp0zUyH2r_1hLQJR0HCc03s0XNiRj9_rkklDqnNWcazorO9tebqtC9GAMCo3DqN7AlcsnnQKzBsqCOcb_asmlizGrLkQr2RiqpdjWeaP5LZUvQrYuhllzh8Fs7P9-14wzc5qjzawhQbXiczKY7ddr1y_C4DmCdKnjEbo8vpOVYJmgBtZMSkEuRQLf8uQ4f8GzsThbp59ZtfT2Hpb8tSo0uEUgXg");'>
+            <div class="h-full w-full bg-primary/10 mix-blend-multiply"></div>
+          </div>
+          <div class="flex flex-1 flex-col justify-center p-8">
+            <div class="mb-2 flex items-center gap-2">
+              <span class="rounded-full bg-primary/20 px-3 py-1 text-xs font-semibold text-primary-dark dark:text-primary">FEATURED</span>
+              <span class="rounded-full bg-gray-100 dark:bg-gray-700 px-3 py-1 text-xs font-semibold text-gray-600 dark:text-gray-300">Compliance</span>
+            </div>
+            <h3 class="mb-3 text-2xl font-bold text-text-main dark:text-white">CBAM Compliance Consulting</h3>
+            <p class="mb-6 text-gray-600 dark:text-gray-400">
+              Navigate the complexities of the Carbon Border Adjustment Mechanism (CBAM) with expert guidance. Ensure your cross-border trade remains compliant and avoid penalties with our specialized module and consulting package.
+            </p>
+            <div class="flex items-center gap-4">
+              <a href="/contact" class="rounded-lg bg-primary px-6 py-2.5 text-sm font-semibold text-text-main shadow-sm hover:bg-primary-hover transition-colors">Get Started</a>
+              <a href="#" class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Learn more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Industry Modules Grid -->
+    <section class="mb-12">
+      <div class="mb-6 flex items-center justify-between">
+        <h2 class="text-xl font-bold text-text-main dark:text-white">Industry Specific Modules</h2>
+        <a href="#" class="text-sm font-medium text-primary hover:text-primary-hover">View all</a>
+      </div>
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Card 1: Hospitality -->
+        <div class="group flex flex-col rounded-xl bg-surface-light dark:bg-surface-dark shadow-sm transition-all hover:-translate-y-1 hover:shadow-md">
+          <div class="relative h-48 w-full overflow-hidden rounded-t-xl">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD8-5C_UB2wvetBjP1EYJvGOc0lm4opwX3Y7g2mYXarj3gjB8NEp5fHC8bRhe9k8CQgcmL-yFNphNGCrI_trxKFaWo4iIt4Cn95uG16c6D8I0mBVFv3CIujoTLWZx99zlqdEnB74vlUXdyiBUw6h_BK1ei2vGebqQIiXcvLksLCC283SkxvIqhfYwGfF7LZ_-mmfEStg2X8jwATgWb1yfD7nzAGtU_12umiHzioXGO8LJLVk_pV50AeWy-Ezps0MLEV1By__k6KJcs");'></div>
+            <div class="absolute right-3 top-3 rounded-lg bg-white/90 px-2 py-1 text-xs font-bold text-gray-800 backdrop-blur-sm">Hospitality</div>
+          </div>
+          <div class="flex flex-1 flex-col p-5">
+            <div class="mb-3 flex size-10 items-center justify-center rounded-lg bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400">
+              <span class="material-symbols-outlined">hotel</span>
+            </div>
+            <h3 class="mb-2 text-lg font-bold text-text-main dark:text-white">Hospitality Tracker</h3>
+            <p class="mb-4 flex-1 text-sm text-gray-600 dark:text-gray-400">Track emissions per guest night, manage laundry energy usage, and benchmark against sustainable tourism standards.</p>
+            <button class="w-full rounded-lg border border-gray-200 dark:border-gray-700 py-2 text-sm font-medium text-text-main dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">Add to Plan</button>
+          </div>
+        </div>
+
+        <!-- Card 2: Textile -->
+        <div class="group flex flex-col rounded-xl bg-surface-light dark:bg-surface-dark shadow-sm transition-all hover:-translate-y-1 hover:shadow-md">
+          <div class="relative h-48 w-full overflow-hidden rounded-t-xl">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAuS4DQHCJK9H-zkSmnee1wsn_SNOxMHyZPoXbKBnhRe1lmwhV_Xkj2kJnAP-d_qEg-BKRGY9hyg9gW6xLrNofwQ1pd6LB5Y4Dr-G8KMmbVOnxqym5KZd_NDwFSI6zuiV5En0pn_lC5DYqSQ9zlwKBFgcZPaoaGhTDhsMZVJDxXVz0-exWeiS9vzcAoX5iAMbP0RbwJu7jkYQFlMuncmxgYyGt7mr9IEAMgOa7lt4B1RH3SIqCZ0o1Web9ZaC0vGOVSMc3cYMryXNQ");'></div>
+            <div class="absolute right-3 top-3 rounded-lg bg-white/90 px-2 py-1 text-xs font-bold text-gray-800 backdrop-blur-sm">Textile</div>
+          </div>
+          <div class="flex flex-1 flex-col p-5">
+            <div class="mb-3 flex size-10 items-center justify-center rounded-lg bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400">
+              <span class="material-symbols-outlined">checkroom</span>
+            </div>
+            <h3 class="mb-2 text-lg font-bold text-text-main dark:text-white">Textile Lifecycle</h3>
+            <p class="mb-4 flex-1 text-sm text-gray-600 dark:text-gray-400">End-to-end supply chain transparency. Calculate raw material impact and fabric processing emissions accurately.</p>
+            <button class="w-full rounded-lg bg-primary/10 dark:bg-primary/20 border border-transparent py-2 text-sm font-medium text-primary hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">Active</button>
+          </div>
+        </div>
+
+        <!-- Card 3: Real Estate -->
+        <div class="group flex flex-col rounded-xl bg-surface-light dark:bg-surface-dark shadow-sm transition-all hover:-translate-y-1 hover:shadow-md">
+          <div class="relative h-48 w-full overflow-hidden rounded-t-xl">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCnPDdU4qM6lKEBYy82ly4zoRfBcUni6RBPESA3oEFerY_tS86EZhHnwKam1gbhmGbP6DOzPagdWZlPMPrMdXvMBq4iQJwkNX-aao5y3Fni_WBlocg0BiOgpsM8tQXeorbGDmWmtgL3cO10dwXeJgYMI0tF3haFFThMA2DHeq9JXz9tlddeFGC6FU4y3PMgoF_9Hozst3SoteQDuRqzBKu-rb_obiV_91jcxZW7_2pvwsogBB8XFTfmd7i6LVNO1e99nwtbnWtlzy0");'></div>
+            <div class="absolute right-3 top-3 rounded-lg bg-white/90 px-2 py-1 text-xs font-bold text-gray-800 backdrop-blur-sm">Real Estate</div>
+          </div>
+          <div class="flex flex-1 flex-col p-5">
+            <div class="mb-3 flex size-10 items-center justify-center rounded-lg bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400">
+              <span class="material-symbols-outlined">apartment</span>
+            </div>
+            <h3 class="mb-2 text-lg font-bold text-text-main dark:text-white">Portfolio Manager</h3>
+            <p class="mb-4 flex-1 text-sm text-gray-600 dark:text-gray-400">Benchmarking for multi-tenant properties. Automated utility data ingestion and GRESB reporting tools.</p>
+            <button class="w-full rounded-lg border border-gray-200 dark:border-gray-700 py-2 text-sm font-medium text-text-main dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">Add to Plan</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Consulting Services Section -->
+    <section class="mb-12">
+      <h2 class="mb-6 text-xl font-bold text-text-main dark:text-white">Expert Services</h2>
+      <div class="grid gap-6 md:grid-cols-2">
+        <!-- Service 1 -->
+        <div class="flex flex-col sm:flex-row rounded-xl bg-surface-light dark:bg-surface-dark p-6 shadow-sm border border-transparent hover:border-primary/30 transition-colors">
+          <div class="mb-4 sm:mb-0 sm:mr-6 shrink-0">
+            <div class="flex size-14 items-center justify-center rounded-full bg-primary/10 text-primary">
+              <span class="material-symbols-outlined text-3xl">verified_user</span>
+            </div>
+          </div>
+          <div class="flex flex-col items-start">
+            <h3 class="text-lg font-bold text-text-main dark:text-white">Corporate Carbon Audit</h3>
+            <p class="mt-1 mb-4 text-sm text-gray-600 dark:text-gray-400">
+              Get a full Scope 1, 2, and 3 verification by our certified environmental engineers. Perfect for annual reports and investor assurance.
+            </p>
+            <a href="/contact" class="mt-auto flex items-center text-sm font-bold text-primary hover:text-primary-hover">
+              Book Consultation <span class="material-symbols-outlined ml-1 text-base">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+        <!-- Service 2 -->
+        <div class="flex flex-col sm:flex-row rounded-xl bg-surface-light dark:bg-surface-dark p-6 shadow-sm border border-transparent hover:border-primary/30 transition-colors">
+          <div class="mb-4 sm:mb-0 sm:mr-6 shrink-0">
+            <div class="flex size-14 items-center justify-center rounded-full bg-primary/10 text-primary">
+              <span class="material-symbols-outlined text-3xl">api</span>
+            </div>
+          </div>
+          <div class="flex flex-col items-start">
+            <h3 class="text-lg font-bold text-text-main dark:text-white">Custom API Integration</h3>
+            <p class="mt-1 mb-4 text-sm text-gray-600 dark:text-gray-400">
+              Connect Carbon Agent directly to your ERP, Logistics, or Procurement software for real-time automated data collection.
+            </p>
+            <a href="/contact" class="mt-auto flex items-center text-sm font-bold text-primary hover:text-primary-hover">
+              Contact Sales <span class="material-symbols-outlined ml-1 text-base">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer / Trust Section -->
+    <section class="border-t border-gray-200 dark:border-gray-800 py-10">
+      <p class="mb-6 text-center text-sm font-medium text-gray-500">Trusted by sustainability leaders in:</p>
+      <div class="flex flex-wrap justify-center gap-8 opacity-50 grayscale">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined">flight_takeoff</span>
+          <span class="font-bold text-lg">AeroGreen</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined">factory</span>
+          <span class="font-bold text-lg">BuildCo</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined">local_shipping</span>
+          <span class="font-bold text-lg">LogiTech</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined">forest</span>
+          <span class="font-bold text-lg">EcoPaper</span>
+        </div>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
