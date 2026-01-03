@@ -1,0 +1,189 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Pricing - Carbon Agent">
+	<Header />
+	<main class="flex-1">
+		<!-- Hero Section -->
+		<section class="relative py-16 sm:py-24">
+			<div class="absolute inset-0 -z-10 overflow-hidden">
+				<div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full opacity-30 dark:opacity-10 pointer-events-none" style="background-image: radial-gradient(circle at 50% 0%, #0bda95 0%, transparent 40%);"></div>
+			</div>
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+				<h1 class="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 dark:text-white mb-6">
+					Choose the Right Plan for Your <br class="hidden sm:block" />
+					<span class="text-primary">Carbon Journey</span>
+				</h1>
+				<p class="max-w-2xl mx-auto text-lg text-slate-600 dark:text-slate-400 mb-10">
+					Transparent pricing that scales with your sustainability goals. No hidden fees. Compliant with ISO 14064 & GHG Protocol.
+				</p>
+				<!-- Billing Toggle -->
+				<div class="flex justify-center mb-12">
+					<div class="inline-flex rounded-xl bg-emerald-50 dark:bg-emerald-900/30 p-1 border border-emerald-100 dark:border-emerald-800">
+						<button class="px-6 py-2.5 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-all">
+							Monthly
+						</button>
+						<button class="px-6 py-2.5 rounded-lg bg-white dark:bg-background-dark text-slate-900 dark:text-white text-sm font-bold shadow-sm transition-all flex items-center gap-2">
+							Annual
+							<span class="text-[10px] uppercase tracking-wider font-bold text-primary bg-primary/10 px-1.5 py-0.5 rounded">Save 20%</span>
+						</button>
+					</div>
+				</div>
+			</div>
+			<!-- Pricing Cards -->
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+					<!-- Starter Plan -->
+					<div class="relative flex flex-col rounded-2xl border border-emerald-100 dark:border-emerald-800 bg-surface-light dark:bg-surface-dark p-8 shadow-sm hover:shadow-md transition-shadow">
+						<div class="mb-6">
+							<h3 class="text-lg font-bold text-slate-900 dark:text-white">Starter</h3>
+							<p class="text-sm text-slate-500 dark:text-slate-400 mt-2">Perfect for small businesses starting reporting.</p>
+						</div>
+						<div class="mb-6">
+							<span class="text-4xl font-black text-slate-900 dark:text-white">$49</span>
+							<span class="text-slate-500 dark:text-slate-400 font-medium">/mo</span>
+						</div>
+						<button class="w-full h-12 rounded-lg bg-emerald-50 dark:bg-emerald-900/40 text-slate-900 dark:text-white font-bold text-sm hover:bg-emerald-100 dark:hover:bg-emerald-900/60 transition-colors mb-8">
+							Start Free Trial
+						</button>
+						<ul class="space-y-4 text-sm text-slate-700 dark:text-slate-300">
+							<li class="flex gap-3">
+								<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+								<span>Scope 1 & 2 Reporting</span>
+							</li>
+							<li class="flex gap-3">
+								<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+								<span>1 User Seat</span>
+							</li>
+							<li class="flex gap-3">
+								<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+								<span>Basic Analytics Dashboard</span>
+							</li>
+							<li class="flex gap-3">
+								<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+								<span>Email Support</span>
+							</li>
+						</ul>
+					</div>
+					<!-- Growth Plan (Most Popular) -->
+					<div class="relative flex flex-col rounded-2xl border-2 border-primary bg-surface-light dark:bg-surface-dark p-8 shadow-xl scale-105 z-10">
+						<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-slate-900 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wide">
+							Most Popular
+						</div>
+						<div class="mb-6">
+							<h3 class="text-lg font-bold text-slate-900 dark:text-white">Growth</h3>
+							<p class="text-sm text-slate-500 dark:text-slate-400 mt-2">For expanding companies needing robust data.</p>
+						</div>
+						<div class="mb-6">
+							<span class="text-4xl font-black text-slate-900 dark:text-white">$299</span>
+							<span class="text-slate-500 dark:text-slate-400 font-medium">/mo</span>
+						</div>
+						<button class="w-full h-12 rounded-lg bg-primary text-slate-900 font-bold text-sm hover:opacity-90 transition-opacity mb-8">
+							Start Free Trial
+						</button>
+						<ul class="space-y-4 text-sm text-slate-700 dark:text-slate-300">
+							<li class="flex gap-3">
+								<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+								<span>Scope 1, 2 & 3 Reporting</span>
+							</li>
+							<li class="flex gap-3">
+								<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+								<span>5 User Seats</span>
+							</li>
+							<li class="flex gap-3">
+								<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+								<span>Scenario Analysis & Forecasting</span>
+							</li>
+							<li class="flex gap-3">
+								<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+								<span>API Access</span>
+							</li>
+							<li class="flex gap-3">
+								<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+								<span>Supply Chain Portal</span>
+							</li>
+						</ul>
+					</div>
+					<!-- Enterprise Plan -->
+					<div class="relative flex flex-col rounded-2xl border border-emerald-100 dark:border-emerald-800 bg-surface-light dark:bg-surface-dark p-8 shadow-sm hover:shadow-md transition-shadow">
+						<div class="mb-6">
+							<h3 class="text-lg font-bold text-slate-900 dark:text-white">Enterprise</h3>
+							<p class="text-sm text-slate-500 dark:text-slate-400 mt-2">Custom solutions for large organizations.</p>
+						</div>
+						<div class="mb-6 flex items-baseline">
+							<span class="text-4xl font-black text-slate-900 dark:text-white">Custom</span>
+						</div>
+						<button class="w-full h-12 rounded-lg bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold text-sm hover:opacity-90 transition-opacity mb-8">
+							Contact Sales
+						</button>
+						<ul class="space-y-4 text-sm text-slate-700 dark:text-slate-300">
+							<li class="flex gap-3">
+								<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+								<span>Everything in Growth</span>
+							</li>
+							<li class="flex gap-3">
+								<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+								<span>Unlimited Users</span>
+							</li>
+							<li class="flex gap-3">
+								<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+								<span>Custom Integrations (SAP, Oracle)</span>
+							</li>
+							<li class="flex gap-3">
+								<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+								<span>Dedicated Success Manager</span>
+							</li>
+							<li class="flex gap-3">
+								<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+								<span>Audit Logs & SSO</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- FAQ Section -->
+		<section class="py-16 sm:py-24">
+			<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+				<h2 class="text-3xl font-bold text-slate-900 dark:text-white text-center mb-12">Frequently Asked Questions</h2>
+				<div class="space-y-4">
+					<!-- FAQ Item 1 -->
+					<details class="group rounded-xl bg-white dark:bg-surface-dark border border-emerald-100 dark:border-emerald-800/50 open:ring-2 open:ring-primary/20 transition-all">
+						<summary class="flex cursor-pointer items-center justify-between p-6 font-medium text-slate-900 dark:text-white">
+							What data do I need to get started?
+							<span class="material-symbols-outlined transition-transform group-open:rotate-180 text-primary">expand_more</span>
+						</summary>
+						<div class="px-6 pb-6 text-slate-600 dark:text-slate-400 leading-relaxed">
+							To start, you'll generally need utility bills (electricity, gas) for Scope 1 & 2. For Scope 3, our onboarding tool will guide you through collecting data from your supply chain and logistics partners.
+						</div>
+					</details>
+					<!-- FAQ Item 2 -->
+					<details class="group rounded-xl bg-white dark:bg-surface-dark border border-emerald-100 dark:border-emerald-800/50 open:ring-2 open:ring-primary/20 transition-all">
+						<summary class="flex cursor-pointer items-center justify-between p-6 font-medium text-slate-900 dark:text-white">
+							Can I upgrade my plan later?
+							<span class="material-symbols-outlined transition-transform group-open:rotate-180 text-primary">expand_more</span>
+						</summary>
+						<div class="px-6 pb-6 text-slate-600 dark:text-slate-400 leading-relaxed">
+							Yes, absolutely. You can upgrade to the Growth or Enterprise plan at any time. We will prorate your payment so you only pay for what you use.
+						</div>
+					</details>
+					<!-- FAQ Item 3 -->
+					<details class="group rounded-xl bg-white dark:bg-surface-dark border border-emerald-100 dark:border-emerald-800/50 open:ring-2 open:ring-primary/20 transition-all">
+						<summary class="flex cursor-pointer items-center justify-between p-6 font-medium text-slate-900 dark:text-white">
+							Is my data secure?
+							<span class="material-symbols-outlined transition-transform group-open:rotate-180 text-primary">expand_more</span>
+						</summary>
+						<div class="px-6 pb-6 text-slate-600 dark:text-slate-400 leading-relaxed">
+							Security is our top priority. We are SOC 2 Type II compliant and use bank-grade encryption for all data in transit and at rest.
+						</div>
+					</details>
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer />
+</Layout>
